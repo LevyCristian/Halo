@@ -22,6 +22,10 @@
 		D7A048F32709376B00A87FB5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048F22709376B00A87FB5 /* APIError.swift */; };
 		D7A048F62709393A00A87FB5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048F52709393A00A87FB5 /* APIClient.swift */; };
 		D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129827093E74001FDED0 /* Endpoint.swift */; };
+		D7E0129C270942B6001FDED0 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129B270942B6001FDED0 /* Show.swift */; };
+		D7E012A02709459C001FDED0 /* TVmazeAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129F2709459C001FDED0 /* TVmazeAPIProvider.swift */; };
+		D7E012A227094894001FDED0 /* TVmazeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E012A127094894001FDED0 /* TVmazeClientProtocol.swift */; };
+		D7E012A4270948EF001FDED0 /* TVmazeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E012A3270948EF001FDED0 /* TVmazeAPIClient.swift */; };
 		D7EDA3EB270926F400280B8C /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = D7EDA3EA270926F400280B8C /* Quick */; };
 		D7EDA3F02709271F00280B8C /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = D7EDA3EF2709271F00280B8C /* Nimble */; };
 /* End PBXBuildFile section */
@@ -65,6 +69,10 @@
 		D7A048F22709376B00A87FB5 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		D7A048F52709393A00A87FB5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		D7E0129827093E74001FDED0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		D7E0129B270942B6001FDED0 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		D7E0129F2709459C001FDED0 /* TVmazeAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeAPIProvider.swift; sourceTree = "<group>"; };
+		D7E012A127094894001FDED0 /* TVmazeClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeClientProtocol.swift; sourceTree = "<group>"; };
+		D7E012A3270948EF001FDED0 /* TVmazeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +187,7 @@
 		D7A048F12709374B00A87FB5 /* Network Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				D7E0129D27094550001FDED0 /* Service */,
 				D7E0129A27093F4A001FDED0 /* Entities */,
 				D7A048F22709376B00A87FB5 /* APIError.swift */,
 				D7A048F52709393A00A87FB5 /* APIClient.swift */,
@@ -190,8 +199,27 @@
 		D7E0129A27093F4A001FDED0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D7E0129B270942B6001FDED0 /* Show.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		D7E0129D27094550001FDED0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D7E0129E27094573001FDED0 /* TVmazeAPI */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D7E0129E27094573001FDED0 /* TVmazeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D7E012A3270948EF001FDED0 /* TVmazeAPIClient.swift */,
+				D7E0129F2709459C001FDED0 /* TVmazeAPIProvider.swift */,
+				D7E012A127094894001FDED0 /* TVmazeClientProtocol.swift */,
+			);
+			path = TVmazeAPI;
 			sourceTree = "<group>";
 		};
 		D7EDA3E9270926F400280B8C /* Frameworks */ = {
@@ -382,12 +410,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D706053D27091FF6008F3897 /* ViewController.swift in Sources */,
+				D7E012A227094894001FDED0 /* TVmazeClientProtocol.swift in Sources */,
 				D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */,
 				D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */,
 				D7A048F62709393A00A87FB5 /* APIClient.swift in Sources */,
 				D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */,
 				D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */,
+				D7E0129C270942B6001FDED0 /* Show.swift in Sources */,
+				D7E012A02709459C001FDED0 /* TVmazeAPIProvider.swift in Sources */,
 				D706053927091FF6008F3897 /* AppDelegate.swift in Sources */,
+				D7E012A4270948EF001FDED0 /* TVmazeAPIClient.swift in Sources */,
 				D706053B27091FF6008F3897 /* SceneDelegate.swift in Sources */,
 				D7A048F0270936CF00A87FB5 /* Descriptable.swift in Sources */,
 				D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */,

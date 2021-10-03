@@ -11,7 +11,7 @@ import Foundation
 enum APIError: Error, ErrorDescriptable {
     /// Not found and object case
     case notFound
-    ///Network problem case
+    /// Network problem case
     case networkProblem
     /// Bad request case
     case badRequest
@@ -23,7 +23,7 @@ enum APIError: Error, ErrorDescriptable {
     /// - Parameters:
     ///   - HTTPURLResponse: The specific HTTP response for that error
     case unknown(HTTPURLResponse?)
-    
+
     /// Initialize a Api error of a failed response
     /// - Parameter response: The specific URL response for that error
     init(response: URLResponse?) {
@@ -40,7 +40,7 @@ enum APIError: Error, ErrorDescriptable {
             self = .unknown(response)
         }
     }
-    
+
     /// A string  describing what error occurred.
     var description: String {
         switch self {
