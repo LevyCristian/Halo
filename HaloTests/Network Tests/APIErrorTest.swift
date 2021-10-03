@@ -11,15 +11,15 @@ import Nimble
 @testable import Halo
 
 class APIErrorTest: QuickSpec {
-    
+
     private let defaultURL = URL(string: "http://localhost:8090/")!
-    
+
     override func spec() {
-        
+
         describe("APIError test") {
-            
+
             context("Initialize test") {
-                
+
                 it("should handle error 400") {
                     let mockedResponse = HTTPURLResponse(url: self.defaultURL,
                                                          statusCode: 400,
@@ -29,7 +29,7 @@ class APIErrorTest: QuickSpec {
                     expect(error.description).to(equal(APIError.badRequest.description))
                     expect(error.errorDescription).to(equal(APIError.ErrorMessages.RequestFailed))
                 }
-                
+
                 it("should handle error 404") {
                     let mockedResponse = HTTPURLResponse(url: self.defaultURL,
                                                          statusCode: 404,
@@ -48,7 +48,7 @@ class APIErrorTest: QuickSpec {
                     expect(error.description).to(equal(APIError.unknown(mockedResponse).description))
                     expect(error.errorDescription).to(equal(APIError.ErrorMessages.ServerError))
                 }
-                
+
                 it("should handle error unknown error") {
                     let error = APIError(response: nil)
                     expect(error.description).to(equal(APIError.unknown(nil).description))

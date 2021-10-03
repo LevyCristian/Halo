@@ -19,7 +19,7 @@ platform :ios do
   desc "Runs all the tests"
   lane :test do
     scan(
-      scheme: Halo,
+      scheme: "Halo",
       code_coverage: true
     )
   end
@@ -29,9 +29,9 @@ platform :ios do
     test
     slather(
       travis: true,
-      scheme: Halo,
+      scheme: "Halo",
       coveralls: true,
-      proj: Halo.xcodeproj”    
+      proj: "Halo.xcodeproj"    
     )
   end
 end
