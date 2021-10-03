@@ -292,7 +292,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D706056227091FFA008F3897 /* Build configuration list for PBXNativeTarget "Halo" */;
 			buildPhases = (
-				D7EDA3F1270927D900280B8C /* Swift Lint Script */,
 				D706053127091FF6008F3897 /* Sources */,
 				D706053227091FF6008F3897 /* Frameworks */,
 				D706053327091FF6008F3897 /* Resources */,
@@ -312,7 +311,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D706056527091FFA008F3897 /* Build configuration list for PBXNativeTarget "HaloTests" */;
 			buildPhases = (
-				D7EDA3F22709280600280B8C /* Swift Lint Script */,
 				D706054A27091FFA008F3897 /* Sources */,
 				D706054B27091FFA008F3897 /* Frameworks */,
 				D706054C27091FFA008F3897 /* Resources */,
@@ -422,45 +420,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D7EDA3F1270927D900280B8C /* Swift Lint Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Lint Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect --config \".swiftlint.auto.yml\" && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		D7EDA3F22709280600280B8C /* Swift Lint Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Lint Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect --config \".swiftlint.auto.yml\" && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D706053127091FF6008F3897 /* Sources */ = {
