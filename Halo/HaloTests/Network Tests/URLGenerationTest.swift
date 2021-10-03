@@ -1,5 +1,5 @@
 //
-//  URLGenerationTests.swift
+//  URLGenerationTest.swift
 //  HaloTests
 //
 //  Created by Levy Cristian on 03/10/21.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 @testable import Halo
 
-class URLGenerationTests: QuickSpec {
+class URLGenerationTest: QuickSpec {
 
   private var dictionaryMock = [String: Any]()
 

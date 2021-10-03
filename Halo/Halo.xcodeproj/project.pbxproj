@@ -24,10 +24,11 @@
 		D7A1CDA42709EC15000F209A /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDA32709EC15000F209A /* MockURLProtocol.swift */; };
 		D7A1CDA62709EC49000F209A /* QuickSpec+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDA52709EC49000F209A /* QuickSpec+Extension.swift */; };
 		D7A1CDA92709ED4A000F209A /* showsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D7A1CDA82709ED4A000F209A /* showsMock.json */; };
-		D7A1CDAC2709EF5C000F209A /* URLGenerationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDAB2709EF5C000F209A /* URLGenerationTests.swift */; };
+		D7A1CDAC2709EF5C000F209A /* URLGenerationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDAB2709EF5C000F209A /* URLGenerationTest.swift */; };
 		D7A1CDAE2709F064000F209A /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDAD2709F064000F209A /* EndpointTest.swift */; };
 		D7A1CDB02709F1E7000F209A /* TVmazeAPIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDAF2709F1E7000F209A /* TVmazeAPIClientTest.swift */; };
 		D7A1CDB42709F4AB000F209A /* castsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D7A1CDB32709F4AB000F209A /* castsMock.json */; };
+		D7A1CDB62709F70F000F209A /* APIErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDB52709F70F000F209A /* APIErrorTest.swift */; };
 		D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129827093E74001FDED0 /* Endpoint.swift */; };
 		D7E0129C270942B6001FDED0 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129B270942B6001FDED0 /* Show.swift */; };
 		D7E012A02709459C001FDED0 /* TVmazeAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129F2709459C001FDED0 /* TVmazeAPIProvider.swift */; };
@@ -78,10 +79,11 @@
 		D7A1CDA32709EC15000F209A /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		D7A1CDA52709EC49000F209A /* QuickSpec+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Extension.swift"; sourceTree = "<group>"; };
 		D7A1CDA82709ED4A000F209A /* showsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = showsMock.json; sourceTree = "<group>"; };
-		D7A1CDAB2709EF5C000F209A /* URLGenerationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerationTests.swift; sourceTree = "<group>"; };
+		D7A1CDAB2709EF5C000F209A /* URLGenerationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerationTest.swift; sourceTree = "<group>"; };
 		D7A1CDAD2709F064000F209A /* EndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTest.swift; sourceTree = "<group>"; };
 		D7A1CDAF2709F1E7000F209A /* TVmazeAPIClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeAPIClientTest.swift; sourceTree = "<group>"; };
 		D7A1CDB32709F4AB000F209A /* castsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = castsMock.json; sourceTree = "<group>"; };
+		D7A1CDB52709F70F000F209A /* APIErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorTest.swift; sourceTree = "<group>"; };
 		D7E0129827093E74001FDED0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D7E0129B270942B6001FDED0 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		D7E0129F2709459C001FDED0 /* TVmazeAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeAPIProvider.swift; sourceTree = "<group>"; };
@@ -233,9 +235,10 @@
 		D7A1CDAA2709EF16000F209A /* Network Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D7A1CDAB2709EF5C000F209A /* URLGenerationTests.swift */,
+				D7A1CDAB2709EF5C000F209A /* URLGenerationTest.swift */,
 				D7A1CDAD2709F064000F209A /* EndpointTest.swift */,
 				D7A1CDAF2709F1E7000F209A /* TVmazeAPIClientTest.swift */,
+				D7A1CDB52709F70F000F209A /* APIErrorTest.swift */,
 			);
 			path = "Network Tests";
 			sourceTree = "<group>";
@@ -487,11 +490,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A1CDA62709EC49000F209A /* QuickSpec+Extension.swift in Sources */,
-				D7A1CDAC2709EF5C000F209A /* URLGenerationTests.swift in Sources */,
+				D7A1CDAC2709EF5C000F209A /* URLGenerationTest.swift in Sources */,
 				D7A1CDB02709F1E7000F209A /* TVmazeAPIClientTest.swift in Sources */,
 				D7A1CDAE2709F064000F209A /* EndpointTest.swift in Sources */,
 				D7A1CDA42709EC15000F209A /* MockURLProtocol.swift in Sources */,
 				D7A1CDA22709EBBF000F209A /* EndpointProviderTest.swift in Sources */,
+				D7A1CDB62709F70F000F209A /* APIErrorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
