@@ -1,4 +1,2 @@
 coverage_service: coveralls
 xcodeproj: Halo.xcodeproj
-scheme: Halo
-
