@@ -179,11 +179,19 @@
 		D7A048F12709374B00A87FB5 /* Network Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				D7E0129A27093F4A001FDED0 /* Entities */,
 				D7A048F22709376B00A87FB5 /* APIError.swift */,
 				D7A048F52709393A00A87FB5 /* APIClient.swift */,
 				D7E0129827093E74001FDED0 /* Endpoint.swift */,
 			);
 			path = "Network Infrastructure";
+			sourceTree = "<group>";
+		};
+		D7E0129A27093F4A001FDED0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		D7EDA3E9270926F400280B8C /* Frameworks */ = {

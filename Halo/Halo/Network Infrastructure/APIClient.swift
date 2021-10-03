@@ -55,7 +55,7 @@ extension APIClient {
                     completion?(nil, .invalidData)
                 }
             } else {
-                completion?(nil, APIError(response: httpResponse))
+                completion?(nil, .init(response: httpResponse))
             }
         }
         return task
@@ -68,9 +68,9 @@ extension APIClient {
             DispatchQueue.main.async {
                 guard let json = json else {
                     if let error = error {
-                        completion?(Result.failure(error))
+                        completion?(.failure(error))
                     } else {
-                        completion?(Result.failure(.requestFailed))
+                        completion?(.failure(.requestFailed))
                     }
                     return
                 }
