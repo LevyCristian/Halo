@@ -15,6 +15,10 @@
 		D706054827091FFA008F3897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D706054627091FFA008F3897 /* LaunchScreen.storyboard */; };
 		D706055327091FFA008F3897 /* HaloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706055227091FFA008F3897 /* HaloTests.swift */; };
 		D706055E27091FFA008F3897 /* HaloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706055D27091FFA008F3897 /* HaloUITests.swift */; };
+		D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */; };
+		D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */; };
+		D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */; };
+		D7A048F0270936CF00A87FB5 /* Descriptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048EF270936CF00A87FB5 /* Descriptable.swift */; };
 		D7EDA3EB270926F400280B8C /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = D7EDA3EA270926F400280B8C /* Quick */; };
 		D7EDA3F02709271F00280B8C /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = D7EDA3EF2709271F00280B8C /* Nimble */; };
 /* End PBXBuildFile section */
@@ -51,6 +55,10 @@
 		D706055927091FFA008F3897 /* HaloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D706055D27091FFA008F3897 /* HaloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloUITests.swift; sourceTree = "<group>"; };
 		D706055F27091FFA008F3897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
+		D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		D7A048EF270936CF00A87FB5 /* Descriptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 		D706053727091FF6008F3897 /* Halo */ = {
 			isa = PBXGroup;
 			children = (
+				D7A048E42709351800A87FB5 /* Helpers */,
 				D706053827091FF6008F3897 /* AppDelegate.swift */,
 				D706053A27091FF6008F3897 /* SceneDelegate.swift */,
 				D706053C27091FF6008F3897 /* ViewController.swift */,
@@ -131,6 +140,33 @@
 				D706055F27091FFA008F3897 /* Info.plist */,
 			);
 			path = HaloUITests;
+			sourceTree = "<group>";
+		};
+		D7A048E42709351800A87FB5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D7A048E62709352900A87FB5 /* Protocols */,
+				D7A048E52709351D00A87FB5 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D7A048E52709351D00A87FB5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */,
+				D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */,
+				D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7A048E62709352900A87FB5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D7A048EF270936CF00A87FB5 /* Descriptable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		D7EDA3E9270926F400280B8C /* Frameworks */ = {
@@ -322,8 +358,12 @@
 			files = (
 				D706053D27091FF6008F3897 /* ViewController.swift in Sources */,
 				D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */,
+				D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */,
+				D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */,
+				D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */,
 				D706053927091FF6008F3897 /* AppDelegate.swift in Sources */,
 				D706053B27091FF6008F3897 /* SceneDelegate.swift in Sources */,
+				D7A048F0270936CF00A87FB5 /* Descriptable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
