@@ -13,7 +13,6 @@
 		D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D706054127091FF6008F3897 /* Halo.xcdatamodeld */; };
 		D706054527091FFA008F3897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D706054427091FFA008F3897 /* Assets.xcassets */; };
 		D706054827091FFA008F3897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D706054627091FFA008F3897 /* LaunchScreen.storyboard */; };
-		D706055327091FFA008F3897 /* HaloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706055227091FFA008F3897 /* HaloTests.swift */; };
 		D706055E27091FFA008F3897 /* HaloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706055D27091FFA008F3897 /* HaloUITests.swift */; };
 		D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */; };
 		D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */; };
@@ -25,6 +24,10 @@
 		D7A1CDA42709EC15000F209A /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDA32709EC15000F209A /* MockURLProtocol.swift */; };
 		D7A1CDA62709EC49000F209A /* QuickSpec+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDA52709EC49000F209A /* QuickSpec+Extension.swift */; };
 		D7A1CDA92709ED4A000F209A /* showsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D7A1CDA82709ED4A000F209A /* showsMock.json */; };
+		D7A1CDAC2709EF5C000F209A /* URLGenerationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDAB2709EF5C000F209A /* URLGenerationTests.swift */; };
+		D7A1CDAE2709F064000F209A /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDAD2709F064000F209A /* EndpointTest.swift */; };
+		D7A1CDB02709F1E7000F209A /* TVmazeAPIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A1CDAF2709F1E7000F209A /* TVmazeAPIClientTest.swift */; };
+		D7A1CDB42709F4AB000F209A /* castsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D7A1CDB32709F4AB000F209A /* castsMock.json */; };
 		D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129827093E74001FDED0 /* Endpoint.swift */; };
 		D7E0129C270942B6001FDED0 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129B270942B6001FDED0 /* Show.swift */; };
 		D7E012A02709459C001FDED0 /* TVmazeAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E0129F2709459C001FDED0 /* TVmazeAPIProvider.swift */; };
@@ -61,7 +64,6 @@
 		D706054727091FFA008F3897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D706054927091FFA008F3897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D706054E27091FFA008F3897 /* HaloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D706055227091FFA008F3897 /* HaloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloTests.swift; sourceTree = "<group>"; };
 		D706055427091FFA008F3897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D706055927091FFA008F3897 /* HaloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D706055D27091FFA008F3897 /* HaloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloUITests.swift; sourceTree = "<group>"; };
@@ -76,6 +78,10 @@
 		D7A1CDA32709EC15000F209A /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		D7A1CDA52709EC49000F209A /* QuickSpec+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+Extension.swift"; sourceTree = "<group>"; };
 		D7A1CDA82709ED4A000F209A /* showsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = showsMock.json; sourceTree = "<group>"; };
+		D7A1CDAB2709EF5C000F209A /* URLGenerationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerationTests.swift; sourceTree = "<group>"; };
+		D7A1CDAD2709F064000F209A /* EndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTest.swift; sourceTree = "<group>"; };
+		D7A1CDAF2709F1E7000F209A /* TVmazeAPIClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeAPIClientTest.swift; sourceTree = "<group>"; };
+		D7A1CDB32709F4AB000F209A /* castsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = castsMock.json; sourceTree = "<group>"; };
 		D7E0129827093E74001FDED0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		D7E0129B270942B6001FDED0 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		D7E0129F2709459C001FDED0 /* TVmazeAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVmazeAPIProvider.swift; sourceTree = "<group>"; };
@@ -150,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				D7A1CDA02709EBA2000F209A /* Helpers */,
-				D706055227091FFA008F3897 /* HaloTests.swift */,
+				D7A1CDAA2709EF16000F209A /* Network Tests */,
 				D706055427091FFA008F3897 /* Info.plist */,
 			);
 			path = HaloTests;
@@ -219,8 +225,19 @@
 			isa = PBXGroup;
 			children = (
 				D7A1CDA82709ED4A000F209A /* showsMock.json */,
+				D7A1CDB32709F4AB000F209A /* castsMock.json */,
 			);
 			path = mocks;
+			sourceTree = "<group>";
+		};
+		D7A1CDAA2709EF16000F209A /* Network Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D7A1CDAB2709EF5C000F209A /* URLGenerationTests.swift */,
+				D7A1CDAD2709F064000F209A /* EndpointTest.swift */,
+				D7A1CDAF2709F1E7000F209A /* TVmazeAPIClientTest.swift */,
+			);
+			path = "Network Tests";
 			sourceTree = "<group>";
 		};
 		D7E0129A27093F4A001FDED0 /* Entities */ = {
@@ -389,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A1CDB42709F4AB000F209A /* castsMock.json in Resources */,
 				D7A1CDA92709ED4A000F209A /* showsMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,8 +487,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A1CDA62709EC49000F209A /* QuickSpec+Extension.swift in Sources */,
+				D7A1CDAC2709EF5C000F209A /* URLGenerationTests.swift in Sources */,
+				D7A1CDB02709F1E7000F209A /* TVmazeAPIClientTest.swift in Sources */,
+				D7A1CDAE2709F064000F209A /* EndpointTest.swift in Sources */,
 				D7A1CDA42709EC15000F209A /* MockURLProtocol.swift in Sources */,
-				D706055327091FFA008F3897 /* HaloTests.swift in Sources */,
 				D7A1CDA22709EBBF000F209A /* EndpointProviderTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

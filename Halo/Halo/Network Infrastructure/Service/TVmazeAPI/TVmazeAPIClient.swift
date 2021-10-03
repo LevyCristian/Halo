@@ -11,8 +11,8 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
 
     var session: URLSession
 
-    init(session: URLSession = URLSession.shared) {
-        self.session = session
+    init(configuration: URLSessionConfiguration =  URLSessionConfiguration.default) {
+        self.session = URLSession(configuration: configuration)
     }
 
     func getshows(at page: Int, completion: @escaping ((Result<[Show], APIError>) -> Void)) {
