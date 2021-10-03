@@ -126,10 +126,9 @@
 		D706053727091FF6008F3897 /* Halo */ = {
 			isa = PBXGroup;
 			children = (
+				D7E012A62709D946001FDED0 /* Application */,
 				D7A048F12709374B00A87FB5 /* Network Infrastructure */,
 				D7A048E42709351800A87FB5 /* Helpers */,
-				D706053827091FF6008F3897 /* AppDelegate.swift */,
-				D706053A27091FF6008F3897 /* SceneDelegate.swift */,
 				D706053C27091FF6008F3897 /* ViewController.swift */,
 				D706054427091FFA008F3897 /* Assets.xcassets */,
 				D706054627091FFA008F3897 /* LaunchScreen.storyboard */,
@@ -220,6 +219,15 @@
 				D7E012A127094894001FDED0 /* TVmazeClientProtocol.swift */,
 			);
 			path = TVmazeAPI;
+			sourceTree = "<group>";
+		};
+		D7E012A62709D946001FDED0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D706053A27091FF6008F3897 /* SceneDelegate.swift */,
+				D706053827091FF6008F3897 /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		D7EDA3E9270926F400280B8C /* Frameworks */ = {
