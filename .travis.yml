@@ -4,3 +4,6 @@ os: osx
 xcode_project: Halo/Halo.xcodeproj
 xcode_scheme: Halo
 xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 8
+
+script:
+– fastlane ios coverage
