@@ -3,7 +3,7 @@ excluded:
 - Pods
 - SwiftLint/Common/3rdPartyLib
 line_length:
-    warning: 150
+    warning: 132
     error: 200
     ignores_function_declarations: true
     ignores_comments: true
@@ -26,7 +26,7 @@ cyclomatic_complexity:
     error: 25
 type_name:
     allowed_symbols: "_"
-variable_name:
+identifier_name:
     min_length:
         warning: 2
 reporter: "xcode"
