@@ -27,7 +27,9 @@ extension Anchor {
                       constant: CGFloat = 0,
                       multipler: CGFloat = 0) -> Self where T: NSLayoutDimension {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self[keyPath: from].constraint(greaterThanOrEqualTo: referent[keyPath: to], multiplier: multipler, constant: constant).isActive = true
+        self[keyPath: from].constraint(
+            greaterThanOrEqualTo: referent[keyPath: to],
+            multiplier: multipler, constant: constant).isActive = true
         return self
     }
 

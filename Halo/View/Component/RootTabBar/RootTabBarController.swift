@@ -30,7 +30,7 @@ class RootTabBarController: FloatyTabBarController {
 
     private func factorController(type: Controllers, at index: Int) -> UINavigationController {
         var navigation: UINavigationController
-        var controller: UIViewController
+        var controller: DiscoveryViewController
 
         let client = TVmazeAPIClient()
         let remoteRepository =  ShowsRemoteDataSource(client: client)
@@ -38,6 +38,7 @@ class RootTabBarController: FloatyTabBarController {
         let viewModel = DiscoveryViewModel(service: repository)
 
         controller = DiscoveryViewController(viewModel: viewModel)
+        controller.scrollDelegate = self
         controller.title = type.rawValue
         navigation = UINavigationController(rootViewController: controller)
         navigation.navigationBar.prefersLargeTitles = true
@@ -78,5 +79,16 @@ class RootTabBarController: FloatyTabBarController {
             nav.navigationBar.compactScrollEdgeAppearance = appearance
         }
 
+    }
+}
+
+extension RootTabBarController: DiscoveryScrollDelegate {
+    func scrollViewDidScroll(_ direction: Direction) {
+        switch direction {
+        case .up:
+            self.setTabBarHidden(false, animated: true)
+        case .down:
+            self.setTabBarHidden(true, animated: true)
+        }
     }
 }

@@ -22,6 +22,9 @@ class DiscoveryViewController: UIViewController {
 
     private var viewModel: PostsViewModelDataSource
 
+    private var lastContentOffset: CGFloat = 0
+    weak var scrollDelegate: DiscoveryScrollDelegate?
+
     init(viewModel: PostsViewModelDataSource) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -64,11 +67,22 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
         cellViewModel.downloadImage(from: cellViewModel.show.image.medium)
         return cell
     }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if lastContentOffset > scrollView.contentOffset.y
+            && lastContentOffset < scrollView.contentSize.height - scrollView.frame.height {
+            self.scrollDelegate?.scrollViewDidScroll(.up)
+        } else if lastContentOffset < scrollView.contentOffset.y && scrollView.contentOffset.y > 0 {
+            self.scrollDelegate?.scrollViewDidScroll(.down)
+        }
+        lastContentOffset = scrollView.contentOffset.y
+    }
 }
 
 extension DiscoveryViewController: CardsLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        guard let imageData = self.viewModel.discoveryCellViewModels[indexPath.row].downloadedData, let image = UIImage(data: imageData) else {
+        guard let imageData = self.viewModel.discoveryCellViewModels[indexPath.row].downloadedData,
+                let image = UIImage(data: imageData) else {
             return 295 + CGFloat.random(in: -20...20)
         }
 
