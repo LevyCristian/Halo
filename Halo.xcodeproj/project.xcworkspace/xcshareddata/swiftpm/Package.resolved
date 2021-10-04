@@ -20,15 +20,6 @@
         }
       },
       {
-        "package": "NeumorphismTab",
-        "repositoryURL": "https://github.com/touyou/NeumorphismTab",
-        "state": {
-          "branch": null,
-          "revision": "8b12e9a2205a66fc68e2869e9b8f52208913a986",
-          "version": "0.9.6"
-        }
-      },
-      {
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/nimble",
         "state": {
@@ -44,15 +35,6 @@
           "branch": null,
           "revision": "bd86ca0141e3cfb333546de5a11ede63f0c4a0e6",
           "version": "4.0.0"
-        }
-      },
-      {
-        "package": "TabBar",
-        "repositoryURL": "https://github.com/onl1ner/TabBar.git",
-        "state": {
-          "branch": null,
-          "revision": "23f403a7b257a3ae9f130d7df9178eaaf7170a69",
-          "version": "1.0.0"
         }
       }
     ]

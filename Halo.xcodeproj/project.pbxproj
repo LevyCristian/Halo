@@ -18,11 +18,14 @@
 		D76F3822270A5167002746E9 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3821270A5167002746E9 /* Identifiable.swift */; };
 		D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3823270A5177002746E9 /* UIView+Autolayout.swift */; };
 		D76F3835270A69C7002746E9 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3834270A69C6002746E9 /* RootTabBarController.swift */; };
-		D76F383B270A6CCA002746E9 /* NeumorphismTab in Frameworks */ = {isa = PBXBuildFile; productRef = D76F383A270A6CCA002746E9 /* NeumorphismTab */; };
 		D76F383E270A7692002746E9 /* BaseCardTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F383D270A7692002746E9 /* BaseCardTabBar.swift */; };
 		D76F3841270A76E4002746E9 /* FloatyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3840270A76E4002746E9 /* FloatyTabBar.swift */; };
 		D76F3845270A7B1F002746E9 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3844270A7B1F002746E9 /* CGPoint+Distance.swift */; };
 		D76F3847270A7C4E002746E9 /* FloatyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */; };
+		D77010D6270B164000353695 /* ShowsRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010D5270B164000353695 /* ShowsRemoteDataSourceProtocol.swift */; };
+		D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */; };
+		D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */; };
+		D77010DD270B1E7F00353695 /* ShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010DC270B1E7F00353695 /* ShowsRepository.swift */; };
 		D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */; };
 		D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */; };
 		D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */; };
@@ -86,6 +89,10 @@
 		D76F3840270A76E4002746E9 /* FloatyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyTabBar.swift; sourceTree = "<group>"; };
 		D76F3844270A7B1F002746E9 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
 		D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyTabBarController.swift; sourceTree = "<group>"; };
+		D77010D5270B164000353695 /* ShowsRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRemoteDataSource.swift; sourceTree = "<group>"; };
+		D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsUseCaseProtocol.swift; sourceTree = "<group>"; };
+		D77010DC270B1E7F00353695 /* ShowsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRepository.swift; sourceTree = "<group>"; };
 		D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -113,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D76F383B270A6CCA002746E9 /* NeumorphismTab in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +168,7 @@
 			children = (
 				D7E012A62709D946001FDED0 /* Application */,
 				D7A048E42709351800A87FB5 /* Helpers */,
+				D77010D2270B14B600353695 /* Repository */,
 				D7A048F12709374B00A87FB5 /* Network Infrastructure */,
 				D76F3825270A52A9002746E9 /* View */,
 				D706053C27091FF6008F3897 /* ViewController.swift */,
@@ -195,6 +202,7 @@
 		D76F3825270A52A9002746E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D77010D1270B147E00353695 /* Discovery */,
 				D76F383C270A7684002746E9 /* Component */,
 				D76F3826270A52BD002746E9 /* RootTabBar */,
 			);
@@ -225,6 +233,48 @@
 				D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */,
 			);
 			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		D77010D1270B147E00353695 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		D77010D2270B14B600353695 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D3270B15F900353695 /* Shows */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D77010D3270B15F900353695 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D4270B160700353695 /* DataSource */,
+				D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */,
+				D77010DC270B1E7F00353695 /* ShowsRepository.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		D77010D4270B160700353695 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D9270B1D3600353695 /* Remote */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D77010D9270B1D3600353695 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */,
+				D77010D5270B164000353695 /* ShowsRemoteDataSourceProtocol.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		D7A048E42709351800A87FB5 /* Helpers */ = {
@@ -361,7 +411,6 @@
 			);
 			name = Halo;
 			packageProductDependencies = (
-				D76F383A270A6CCA002746E9 /* NeumorphismTab */,
 			);
 			productName = Halo;
 			productReference = D706053527091FF6008F3897 /* Halo.app */;
@@ -442,7 +491,6 @@
 			packageReferences = (
 				D7EDA3E32709236E00280B8C /* XCRemoteSwiftPackageReference "quick" */,
 				D7EDA3EC2709271300280B8C /* XCRemoteSwiftPackageReference "nimble" */,
-				D76F3839270A6CCA002746E9 /* XCRemoteSwiftPackageReference "NeumorphismTab" */,
 			);
 			productRefGroup = D706053627091FF6008F3897 /* Products */;
 			projectDirPath = "";
@@ -533,9 +581,12 @@
 				D76F3845270A7B1F002746E9 /* CGPoint+Distance.swift in Sources */,
 				D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */,
 				D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */,
+				D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */,
 				D7A048F62709393A00A87FB5 /* APIClient.swift in Sources */,
+				D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */,
 				D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */,
 				D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */,
+				D77010D6270B164000353695 /* ShowsRemoteDataSourceProtocol.swift in Sources */,
 				D7E0129C270942B6001FDED0 /* Show.swift in Sources */,
 				D76F3847270A7C4E002746E9 /* FloatyTabBarController.swift in Sources */,
 				D7E012A02709459C001FDED0 /* TVmazeAPIProvider.swift in Sources */,
@@ -545,6 +596,7 @@
 				D76F3820270A5150002746E9 /* ViewCode.swift in Sources */,
 				D706053B27091FF6008F3897 /* SceneDelegate.swift in Sources */,
 				D7A048F0270936CF00A87FB5 /* Descriptable.swift in Sources */,
+				D77010DD270B1E7F00353695 /* ShowsRepository.swift in Sources */,
 				D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */,
 				D7A048F32709376B00A87FB5 /* APIError.swift in Sources */,
 				D76F3822270A5167002746E9 /* Identifiable.swift in Sources */,
@@ -884,14 +936,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D76F3839270A6CCA002746E9 /* XCRemoteSwiftPackageReference "NeumorphismTab" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/touyou/NeumorphismTab";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.6;
-			};
-		};
 		D7EDA3E32709236E00280B8C /* XCRemoteSwiftPackageReference "quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/quick";
@@ -911,11 +955,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D76F383A270A6CCA002746E9 /* NeumorphismTab */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D76F3839270A6CCA002746E9 /* XCRemoteSwiftPackageReference "NeumorphismTab" */;
-			productName = NeumorphismTab;
-		};
 		D7EDA3EA270926F400280B8C /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7EDA3E32709236E00280B8C /* XCRemoteSwiftPackageReference "quick" */;
