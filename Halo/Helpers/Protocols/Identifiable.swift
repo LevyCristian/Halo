@@ -16,3 +16,5 @@ extension Identifiable {
         return String(describing: Self.self)
     }
 }
+
+extension UICollectionViewCell: Identifiable {}

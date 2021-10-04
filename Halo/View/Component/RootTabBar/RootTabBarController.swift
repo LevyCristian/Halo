@@ -32,7 +32,7 @@ class RootTabBarController: FloatyTabBarController {
         var navigation: UINavigationController
         var controller: UIViewController
 
-        controller = ViewController()
+        controller = DiscoveryViewController()
         controller.title = type.rawValue
         navigation = UINavigationController(rootViewController: controller)
         navigation.navigationBar.prefersLargeTitles = true
