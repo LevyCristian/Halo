@@ -71,7 +71,7 @@ class FloatyTabBar: BaseCardTabBar {
 
     override func select(at index: Int, animated: Bool, notifyDelegate: Bool) {
         for (bIndex, button) in buttons().enumerated() {
-            button.selectedColor = .systemBlue
+            button.selectedColor = .white
             button.isSelected = bIndex == index
         }
 

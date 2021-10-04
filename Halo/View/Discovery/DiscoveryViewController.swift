@@ -20,6 +20,24 @@ class DiscoveryViewController: UIViewController {
         return view
     }()
 
+    private var viewModel: PostsViewModelDataSource
+
+    init(viewModel: PostsViewModelDataSource) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = discoveryView
@@ -29,7 +47,7 @@ class DiscoveryViewController: UIViewController {
 
 extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return self.viewModel.discoveryCellViewModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,14 +57,39 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
             let cell = UICollectionViewCell()
             return cell
         }
-        cell.titleLabel.text = "sadhiousdahadshasdasd"
-        cell.imageView.backgroundColor = .gray
+        var cellViewModel = self.viewModel.discoveryCellViewModels[indexPath.row]
+        cellViewModel.indexPath = indexPath
+        cellViewModel.delegate = self
+        cell.configureCard(showTitle: cellViewModel.show.name)
+        cellViewModel.downloadImage(from: cellViewModel.show.image.medium)
         return cell
     }
 }
 
 extension DiscoveryViewController: CardsLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return CGFloat.random(in: 100...250)
+        guard let imageData = self.viewModel.discoveryCellViewModels[indexPath.row].downloadedData, let image = UIImage(data: imageData) else {
+            return 295 + CGFloat.random(in: -20...20)
+        }
+
+        return image.size.height
+    }
+}
+
+extension DiscoveryViewController: ShowsViewModelDelegate, DiscoveryCellViewModelDelegate {
+    func didFinishedDownloadingImage(data: Data, forRowAt indexPath: IndexPath) {
+        guard let cell = self.discoveryView.collectionView.cellForItem(at: indexPath) as? DiscoveryCollectionViewCell else {
+            return
+        }
+        cell.loadCardImage(from: data)
+    }
+
+    func didCompleLoadingShows(models: [DiscoveryCellViewModelDataSource]) {
+        self.discoveryView.collectionView.reloadData()
+
+    }
+
+    func apiDidReturnAnError(error: APIError) {
+        print(error)
     }
 }

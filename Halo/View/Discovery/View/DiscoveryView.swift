@@ -14,6 +14,7 @@ class DiscoveryView: UIView {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.register(DiscoveryCollectionViewCell.self,
                                 forCellWithReuseIdentifier: DiscoveryCollectionViewCell.reuseIdentifier)
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
 
@@ -37,7 +38,8 @@ extension DiscoveryView: ViewCode {
         collectionView
             .anchor(\.topAnchor,
                      referentTo: self,
-                     equal: \.topAnchor)
+                     equal: \.topAnchor,
+                     constant: 12)
             .anchor(\.leadingAnchor,
                      referentTo: self,
                      equal: \.leadingAnchor)
@@ -50,6 +52,6 @@ extension DiscoveryView: ViewCode {
     }
 
     func setupAdditionalConfigurantion() {
-        self.set(\.backgroundColor, to: .systemBackground)
+        self.backgroundColor = .black
     }
 }

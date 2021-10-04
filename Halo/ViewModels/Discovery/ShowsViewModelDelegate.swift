@@ -8,6 +8,6 @@
 import Foundation
 
 protocol ShowsViewModelDelegate: AnyObject {
-    func didCompleLoadingShows(models: [Show])
+    func didCompleLoadingShows(models: [DiscoveryCellViewModelDataSource])
     func apiDidReturnAnError(error: APIError)
 }

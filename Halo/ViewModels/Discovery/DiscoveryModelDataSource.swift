@@ -11,6 +11,8 @@ protocol PostsViewModelDataSource {
     var shows: [Show] { get set }
     var currentPage: Int { get set }
 
+    var discoveryCellViewModels: [DiscoveryCellViewModelDataSource] { get }
+
     var delegate: ShowsViewModelDelegate? { get set }
 
     func loadShows(at page: Int)

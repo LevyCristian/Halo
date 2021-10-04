@@ -33,6 +33,9 @@
 		D77010EC270B286E00353695 /* CardsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010EB270B286E00353695 /* CardsFlowLayout.swift */; };
 		D77010EE270B2C2100353695 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010ED270B2C2100353695 /* DiscoveryViewController.swift */; };
 		D77010F0270B2F1700353695 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010EF270B2F1700353695 /* DiscoveryCollectionViewCell.swift */; };
+		D77010F3270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */; };
+		D77010F5270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */; };
+		D77010F8270B7F7400353695 /* DiscoveryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010F7270B7F7400353695 /* DiscoveryCellViewModel.swift */; };
 		D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */; };
 		D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */; };
 		D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */; };
@@ -107,6 +110,9 @@
 		D77010EB270B286E00353695 /* CardsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsFlowLayout.swift; sourceTree = "<group>"; };
 		D77010ED270B2C2100353695 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		D77010EF270B2F1700353695 /* DiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCellViewModelDataSource.swift; sourceTree = "<group>"; };
+		D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCellViewModelDelegate.swift; sourceTree = "<group>"; };
+		D77010F7270B7F7400353695 /* DiscoveryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCellViewModel.swift; sourceTree = "<group>"; };
 		D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -306,6 +312,7 @@
 		D77010DF270B206200353695 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				D77010F1270B7E7400353695 /* Cell */,
 				D77010E0270B214900353695 /* DiscoveryViewModel.swift */,
 				D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */,
 				D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */,
@@ -328,6 +335,16 @@
 				D77010EB270B286E00353695 /* CardsFlowLayout.swift */,
 			);
 			path = CardsFlowLayout;
+			sourceTree = "<group>";
+		};
+		D77010F1270B7E7400353695 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */,
+				D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */,
+				D77010F7270B7F7400353695 /* DiscoveryCellViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D7A048E42709351800A87FB5 /* Helpers */ = {
@@ -633,6 +650,7 @@
 				D77010EE270B2C2100353695 /* DiscoveryViewController.swift in Sources */,
 				D7E012A227094894001FDED0 /* TVmazeClientProtocol.swift in Sources */,
 				D76F3845270A7B1F002746E9 /* CGPoint+Distance.swift in Sources */,
+				D77010F8270B7F7400353695 /* DiscoveryCellViewModel.swift in Sources */,
 				D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */,
 				D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */,
 				D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */,
@@ -640,6 +658,8 @@
 				D77010F0270B2F1700353695 /* DiscoveryCollectionViewCell.swift in Sources */,
 				D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */,
 				D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */,
+				D77010F5270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift in Sources */,
+				D77010F3270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift in Sources */,
 				D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */,
 				D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */,
 				D77010E5270B232100353695 /* ShowsViewModelDelegate.swift in Sources */,

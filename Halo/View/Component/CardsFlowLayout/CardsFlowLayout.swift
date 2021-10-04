@@ -18,7 +18,7 @@ class CardsFlowLayout: UICollectionViewFlowLayout {
     weak var delegate: CardsLayoutDelegate?
 
     private let numberOfColumns = 2
-    private let cellPadding: CGFloat = 6
+    private let cellPadding: CGFloat = 4
 
     private var cache: [UICollectionViewLayoutAttributes] = []
 
@@ -68,7 +68,7 @@ class CardsFlowLayout: UICollectionViewFlowLayout {
         cache.append(attributes)
 
         contentHeight = max(contentHeight, frame.maxY)
-        yOffset[column] = yOffset[column] + height
+        yOffset[column] = yOffset[column] + height + 10
 
         column = column < (numberOfColumns - 1) ? (column + 1) : 0
       }

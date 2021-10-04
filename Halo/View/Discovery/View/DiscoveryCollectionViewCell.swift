@@ -10,6 +10,9 @@ import UIKit
 class DiscoveryCollectionViewCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let view = UIImageView()
+            .set(\.contentMode, to: .scaleAspectFill)
+            .set(\.clipsToBounds, to: true)
+            .set(\.layer.cornerRadius, to: 15)
         return view
     }()
 
@@ -28,6 +31,19 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
         super.init(coder: coder)
         self.setupView()
     }
+
+    func configureCard(showTitle: String) {
+        titleLabel
+            .set(\.text, to: showTitle)
+            .set(\.textColor, to: .white)
+            .set(\.font, to: UIFont.systemFont(ofSize: 17, weight: .semibold))
+    }
+
+    func loadCardImage(from data: Data) {
+        let image = UIImage(data: data)
+        imageView
+            .set(\.image, to: image)
+    }
 }
 
 extension DiscoveryCollectionViewCell: ViewCode {
@@ -43,9 +59,9 @@ extension DiscoveryCollectionViewCell: ViewCode {
             .anchor(\.trailingAnchor, referentTo: self, equal: \.trailingAnchor)
 
         titleLabel
-            .anchor(\.topAnchor, referentTo: imageView, equal: \.bottomAnchor)
-            .anchor(\.leadingAnchor, referentTo: self, equal: \.leadingAnchor)
-            .anchor(\.trailingAnchor, referentTo: self, equal: \.trailingAnchor)
+            .anchor(\.topAnchor, referentTo: imageView, equal: \.bottomAnchor, constant: 6)
+            .anchor(\.leadingAnchor, referentTo: self, equal: \.leadingAnchor, constant: 6)
+            .anchor(\.trailingAnchor, referentTo: self, equal: \.trailingAnchor, constant: 6)
             .anchor(\.bottomAnchor, referentTo: self, equal: \.bottomAnchor)
 
     }

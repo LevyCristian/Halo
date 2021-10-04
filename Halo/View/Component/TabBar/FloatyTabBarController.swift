@@ -77,7 +77,9 @@ class FloatyTabBarController: UITabBarController {
         tabBarHeightConstraint = customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight)
         tabBarHeightConstraint?.isActive = true
 
-        anotherSmallViewBottomConstraint = anotherSmallView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: tabBarHeight)
+        anotherSmallViewBottomConstraint = anotherSmallView.topAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+            constant: tabBarHeight)
 
         anotherSmallViewBottomConstraint?.priority = .defaultHigh
         anotherSmallViewBottomConstraint?.isActive = true

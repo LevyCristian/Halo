@@ -20,4 +20,10 @@ class ShowsRemoteDataSource: ShowsRemoteDataSourceProtocol {
             completion(result)
         }
     }
+
+    func downloadImage(from url: String, completion: @escaping ((Result<Data, APIError>) -> Void)) {
+        self.client.downloadImage(from: url) { result in
+            completion(result)
+        }
+    }
 }

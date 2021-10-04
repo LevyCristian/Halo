@@ -32,10 +32,16 @@ class RootTabBarController: FloatyTabBarController {
         var navigation: UINavigationController
         var controller: UIViewController
 
-        controller = DiscoveryViewController()
+        let client = TVmazeAPIClient()
+        let remoteRepository =  ShowsRemoteDataSource(client: client)
+        let repository = ShowsRepository(remoteDataSource: remoteRepository)
+        let viewModel = DiscoveryViewModel(service: repository)
+
+        controller = DiscoveryViewController(viewModel: viewModel)
         controller.title = type.rawValue
         navigation = UINavigationController(rootViewController: controller)
         navigation.navigationBar.prefersLargeTitles = true
+        configureNavApparence(nav: navigation)
 
         let item = UITabBarItem()
         item.tag = index
@@ -48,5 +54,29 @@ class RootTabBarController: FloatyTabBarController {
 
     private enum Controllers: String {
         case discovery = "Discovery"
+    }
+
+    private func configureNavApparence(nav: UINavigationController) {
+        let appearance = UINavigationBarAppearance()
+        let appearanceLager = UINavigationBarAppearance()
+
+        appearance.configureWithTransparentBackground()
+        appearanceLager.configureWithTransparentBackground()
+
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearanceLager.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearanceLager.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        let blurEffect = UIBlurEffect(style: .dark)
+        appearance.backgroundEffect = blurEffect
+
+        nav.navigationBar.standardAppearance = appearance
+        nav.navigationBar.compactAppearance = appearance
+        nav.navigationBar.scrollEdgeAppearance = appearanceLager
+        if #available(iOS 15.0, *) {
+            nav.navigationBar.compactScrollEdgeAppearance = appearance
+        }
+
     }
 }
