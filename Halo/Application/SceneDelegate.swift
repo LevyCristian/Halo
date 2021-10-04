@@ -21,11 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         /// 3. Create a view hierarchy programmatically
-        let viewController = ViewController()
-        let navigation = UINavigationController(rootViewController: viewController)
+        let rootController = RootTabBarController()
 
         /// 4. Set the root view controller of the window with your view controller
-        window.rootViewController = navigation
+        window.rootViewController = rootController
 
         /// 5. Set the window and call makeKeyAndVisible()
         self.window = window

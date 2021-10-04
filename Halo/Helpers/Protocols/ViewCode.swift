@@ -20,7 +20,7 @@ extension ViewCode {
         setupConstraints()
         setupAdditionalConfigurantion()
     }
-    
+
     public func setupAdditionalConfigurantion() {
         //
     }
