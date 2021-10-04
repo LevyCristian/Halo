@@ -26,6 +26,9 @@
 		D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */; };
 		D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */; };
 		D77010DD270B1E7F00353695 /* ShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010DC270B1E7F00353695 /* ShowsRepository.swift */; };
+		D77010E1270B214900353695 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E0270B214900353695 /* DiscoveryViewModel.swift */; };
+		D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */; };
+		D77010E5270B232100353695 /* ShowsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */; };
 		D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */; };
 		D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */; };
 		D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */; };
@@ -93,6 +96,9 @@
 		D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRemoteDataSource.swift; sourceTree = "<group>"; };
 		D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsUseCaseProtocol.swift; sourceTree = "<group>"; };
 		D77010DC270B1E7F00353695 /* ShowsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRepository.swift; sourceTree = "<group>"; };
+		D77010E0270B214900353695 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryModelDataSource.swift; sourceTree = "<group>"; };
+		D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewModelDelegate.swift; sourceTree = "<group>"; };
 		D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 				D7A048E42709351800A87FB5 /* Helpers */,
 				D77010D2270B14B600353695 /* Repository */,
 				D7A048F12709374B00A87FB5 /* Network Infrastructure */,
+				D77010DE270B202F00353695 /* View Models */,
 				D76F3825270A52A9002746E9 /* View */,
 				D706053C27091FF6008F3897 /* ViewController.swift */,
 				D706054427091FFA008F3897 /* Assets.xcassets */,
@@ -202,8 +209,8 @@
 		D76F3825270A52A9002746E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D77010D1270B147E00353695 /* Discovery */,
 				D76F383C270A7684002746E9 /* Component */,
+				D77010D1270B147E00353695 /* Discovery */,
 				D76F3826270A52BD002746E9 /* RootTabBar */,
 			);
 			path = View;
@@ -238,6 +245,7 @@
 		D77010D1270B147E00353695 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				D77010E6270B25D600353695 /* View */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -275,6 +283,31 @@
 				D77010D5270B164000353695 /* ShowsRemoteDataSourceProtocol.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		D77010DE270B202F00353695 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				D77010DF270B206200353695 /* Discovery */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		D77010DF270B206200353695 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				D77010E0270B214900353695 /* DiscoveryViewModel.swift */,
+				D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */,
+				D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		D77010E6270B25D600353695 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D7A048E42709351800A87FB5 /* Helpers */ = {
@@ -583,9 +616,11 @@
 				D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */,
 				D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */,
 				D7A048F62709393A00A87FB5 /* APIClient.swift in Sources */,
+				D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */,
 				D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */,
 				D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */,
 				D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */,
+				D77010E5270B232100353695 /* ShowsViewModelDelegate.swift in Sources */,
 				D77010D6270B164000353695 /* ShowsRemoteDataSourceProtocol.swift in Sources */,
 				D7E0129C270942B6001FDED0 /* Show.swift in Sources */,
 				D76F3847270A7C4E002746E9 /* FloatyTabBarController.swift in Sources */,
@@ -596,6 +631,7 @@
 				D76F3820270A5150002746E9 /* ViewCode.swift in Sources */,
 				D706053B27091FF6008F3897 /* SceneDelegate.swift in Sources */,
 				D7A048F0270936CF00A87FB5 /* Descriptable.swift in Sources */,
+				D77010E1270B214900353695 /* DiscoveryViewModel.swift in Sources */,
 				D77010DD270B1E7F00353695 /* ShowsRepository.swift in Sources */,
 				D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */,
 				D7A048F32709376B00A87FB5 /* APIError.swift in Sources */,
