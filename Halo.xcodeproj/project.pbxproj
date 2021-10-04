@@ -29,6 +29,8 @@
 		D77010E1270B214900353695 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E0270B214900353695 /* DiscoveryViewModel.swift */; };
 		D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */; };
 		D77010E5270B232100353695 /* ShowsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */; };
+		D77010E9270B26B000353695 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E8270B26B000353695 /* DiscoveryView.swift */; };
+		D77010EC270B286E00353695 /* CardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010EB270B286E00353695 /* CardsLayout.swift */; };
 		D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */; };
 		D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */; };
 		D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */; };
@@ -99,6 +101,8 @@
 		D77010E0270B214900353695 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
 		D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryModelDataSource.swift; sourceTree = "<group>"; };
 		D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewModelDelegate.swift; sourceTree = "<group>"; };
+		D77010E8270B26B000353695 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
+		D77010EB270B286E00353695 /* CardsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsLayout.swift; sourceTree = "<group>"; };
 		D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -175,8 +179,8 @@
 				D7E012A62709D946001FDED0 /* Application */,
 				D7A048E42709351800A87FB5 /* Helpers */,
 				D77010D2270B14B600353695 /* Repository */,
-				D7A048F12709374B00A87FB5 /* Network Infrastructure */,
-				D77010DE270B202F00353695 /* View Models */,
+				D7A048F12709374B00A87FB5 /* NetworkInfrastructure */,
+				D77010DE270B202F00353695 /* ViewModels */,
 				D76F3825270A52A9002746E9 /* View */,
 				D706053C27091FF6008F3897 /* ViewController.swift */,
 				D706054427091FFA008F3897 /* Assets.xcassets */,
@@ -211,7 +215,6 @@
 			children = (
 				D76F383C270A7684002746E9 /* Component */,
 				D77010D1270B147E00353695 /* Discovery */,
-				D76F3826270A52BD002746E9 /* RootTabBar */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,19 +230,21 @@
 		D76F383C270A7684002746E9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				D76F383F270A76BC002746E9 /* Tab Bar */,
+				D77010EA270B280B00353695 /* CardsCollection */,
+				D76F3826270A52BD002746E9 /* RootTabBar */,
+				D76F383F270A76BC002746E9 /* TabBar */,
 			);
 			path = Component;
 			sourceTree = "<group>";
 		};
-		D76F383F270A76BC002746E9 /* Tab Bar */ = {
+		D76F383F270A76BC002746E9 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				D76F383D270A7692002746E9 /* BaseCardTabBar.swift */,
 				D76F3840270A76E4002746E9 /* FloatyTabBar.swift */,
 				D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */,
 			);
-			path = "Tab Bar";
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		D77010D1270B147E00353695 /* Discovery */ = {
@@ -285,12 +290,12 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
-		D77010DE270B202F00353695 /* View Models */ = {
+		D77010DE270B202F00353695 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				D77010DF270B206200353695 /* Discovery */,
 			);
-			path = "View Models";
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D77010DF270B206200353695 /* Discovery */ = {
@@ -306,8 +311,17 @@
 		D77010E6270B25D600353695 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D77010E8270B26B000353695 /* DiscoveryView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D77010EA270B280B00353695 /* CardsCollection */ = {
+			isa = PBXGroup;
+			children = (
+				D77010EB270B286E00353695 /* CardsLayout.swift */,
+			);
+			path = CardsCollection;
 			sourceTree = "<group>";
 		};
 		D7A048E42709351800A87FB5 /* Helpers */ = {
@@ -341,7 +355,7 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D7A048F12709374B00A87FB5 /* Network Infrastructure */ = {
+		D7A048F12709374B00A87FB5 /* NetworkInfrastructure */ = {
 			isa = PBXGroup;
 			children = (
 				D7E0129D27094550001FDED0 /* Service */,
@@ -350,7 +364,7 @@
 				D7A048F52709393A00A87FB5 /* APIClient.swift */,
 				D7E0129827093E74001FDED0 /* Endpoint.swift */,
 			);
-			path = "Network Infrastructure";
+			path = NetworkInfrastructure;
 			sourceTree = "<group>";
 		};
 		D7A1CDA02709EBA2000F209A /* Helpers */ = {
@@ -629,6 +643,7 @@
 				D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */,
 				D7E012A4270948EF001FDED0 /* TVmazeAPIClient.swift in Sources */,
 				D76F3820270A5150002746E9 /* ViewCode.swift in Sources */,
+				D77010EC270B286E00353695 /* CardsLayout.swift in Sources */,
 				D706053B27091FF6008F3897 /* SceneDelegate.swift in Sources */,
 				D7A048F0270936CF00A87FB5 /* Descriptable.swift in Sources */,
 				D77010E1270B214900353695 /* DiscoveryViewModel.swift in Sources */,
@@ -636,6 +651,7 @@
 				D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */,
 				D7A048F32709376B00A87FB5 /* APIError.swift in Sources */,
 				D76F3822270A5167002746E9 /* Identifiable.swift in Sources */,
+				D77010E9270B26B000353695 /* DiscoveryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
