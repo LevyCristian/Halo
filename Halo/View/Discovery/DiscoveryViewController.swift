@@ -38,7 +38,7 @@ class DiscoveryViewController: UIViewController {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("Class not avaliable to be used by Visual Interface")
     }
 
     override func viewDidLoad() {
@@ -67,7 +67,7 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
         if let imageURL = cellViewModel.show.image?.medium {
             cellViewModel.downloadImage(from: imageURL)
         } else {
-            cell.backgroundColor = .gray
+            cell.imageView.backgroundColor = .gray
         }
         return cell
     }
@@ -86,7 +86,7 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
         let distanceFromBottom = scrollView.contentSize.height - contentYoffset
         if distanceFromBottom < height {
             self.viewModel.currentPage += 1
-            self.viewModel.loadShows(at: self.viewModel.currentPage, completion: nil)
+            self.viewModel.loadShows(at: self.viewModel.currentPage)
         }
     }
 }
@@ -104,7 +104,6 @@ extension DiscoveryViewController: CardsLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
         return 20
     }
-
 }
 
 extension DiscoveryViewController: DiscoveryViewModelDelegate, DiscoveryCellViewModelDelegate {

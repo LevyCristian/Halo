@@ -26,4 +26,10 @@ class ShowsRemoteDataSource: ShowsRemoteDataSourceProtocol {
             completion(result)
         }
     }
+
+    func searchShows(with query: String, completion: @escaping ((Result<[SearchElement], APIError>) -> Void)) {
+        self.client.searchShows(with: query) { result in
+            completion(result)
+        }
+    }
 }

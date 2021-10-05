@@ -1,35 +1,33 @@
 //
-//  DiscoveryViewModel.swift
+//  SearchViewModel.swift
 //  Halo
 //
-//  Created by Levy Cristian on 04/10/21.
+//  Created by Levy Cristian on 05/10/21.
 //
 
 import Foundation
 
-class DiscoveryViewModel: DiscoveryViewModelDataSource {
+class SearchViewModel: SearchViewModelDataSource {
 
     private let service: ShowsUseCaseProtocol
 
     var shows: [Show] = []
     var discoveryCellViewModels: [DiscoveryCellViewModelDataSource] = []
-    var currentPage: Int = 0
 
     weak var delegate: DiscoveryViewModelDelegate?
 
     init(service: ShowsUseCaseProtocol) {
         self.service = service
-        loadShows(at: currentPage)
     }
 
-    func loadShows(at page: Int) {
-        self.service.getshows(at: page) { [weak self] result in
+    func searchShows(with query: String) {
+        self.service.searchShows(with: query) { [weak self] result in
             guard let self = self else {
                 return
             }
             switch result {
-            case .success(let responseShows):
-                self.shows.append(contentsOf: responseShows)
+            case .success(let searchElements):
+                self.shows  = searchElements.compactMap({ $0.show })
                 self.discoveryCellViewModels = self.shows.map({
                     DiscoveryCellViewModel(show: $0,
                                            service: self.service)

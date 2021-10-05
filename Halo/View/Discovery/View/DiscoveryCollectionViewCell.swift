@@ -48,6 +48,7 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         imageView.image = nil
         titleLabel.text = nil
+        imageView.backgroundColor = .clear
     }
 }
 

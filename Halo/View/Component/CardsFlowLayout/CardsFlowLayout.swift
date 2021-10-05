@@ -8,26 +8,7 @@
 import UIKit
 
 @objc protocol CardsLayoutDelegate {
-    /**
-        Size for section header. Optional.
-        
-        @param collectionView - collectionView
-        @param section - section for section header view
-        
-        Returns size for section header view.
-        */
-       @objc optional func collectionView(collectionView: UICollectionView,
-                                          sizeForSectionHeaderViewForSection section: Int) -> CGSize
-       /**
-        Size for section footer. Optional.
-        
-        @param collectionView - collectionView
-        @param section - section for section footer view
-        
-        Returns size for section footer view.
-        */
-       @objc optional func collectionView(collectionView: UICollectionView,
-                                          sizeForSectionFooterViewForSection section: Int) -> CGSize
+
        /**
         Height for image view in cell.
         
@@ -123,28 +104,6 @@ class CardsFlowLayout: UICollectionViewLayout {
             for section in 0..<numberOfSections {
                 let numberOfItems = self.numberOfItems(inSection: section)
 
-                if let headerSize = delegate.collectionView?(
-                    collectionView: collectionView,
-                    sizeForSectionHeaderViewForSection: section
-                ) {
-                    let headerX = (contentWidth - headerSize.width) / 2
-                    let headerFrame = CGRect(
-                        origin: CGPoint(
-                            x: headerX,
-                            y: contentHeight
-                        ),
-                        size: headerSize
-                    )
-                    let headerAttributes = PinterestLayoutAttributes(
-                        forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                        with: IndexPath(item: 0, section: section)
-                    )
-                    headerAttributes.frame = headerFrame
-                    cache.append(headerAttributes)
-
-                    contentHeight = headerFrame.maxY
-                }
-
                 var yOffsets = [CGFloat](
                     repeating: contentHeight,
                     count: numberOfColumns
@@ -184,28 +143,6 @@ class CardsFlowLayout: UICollectionViewLayout {
 
                     contentHeight = max(contentHeight, frame.maxY)
                     yOffsets[column] = yOffsets[column] + cellHeight
-                }
-
-                if let footerSize = delegate.collectionView?(
-                    collectionView: collectionView,
-                    sizeForSectionFooterViewForSection: section
-                ) {
-                    let footerX = (contentWidth - footerSize.width) / 2
-                    let footerFrame = CGRect(
-                        origin: CGPoint(
-                            x: footerX,
-                            y: contentHeight
-                        ),
-                        size: footerSize
-                    )
-                    let footerAttributes = PinterestLayoutAttributes(
-                        forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-                        with: IndexPath(item: 0, section: section)
-                    )
-                    footerAttributes.frame = footerFrame
-                    cache.append(footerAttributes)
-
-                    contentHeight = footerFrame.maxY
                 }
             }
         }
