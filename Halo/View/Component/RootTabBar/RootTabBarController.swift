@@ -9,6 +9,8 @@ import UIKit
 
 class RootTabBarController: FloatyTabBarController {
 
+    private let client = TVmazeAPIClient()
+
     init() {
         super.init(nibName: nil, bundle: nil)
         configureControllers()
@@ -25,36 +27,47 @@ class RootTabBarController: FloatyTabBarController {
     }
 
     private func configureControllers() {
-        viewControllers = [factorController(type: .discovery, at: 0)]
+        viewControllers = [
+            factorController(type: .discovery, at: 0),
+            factorController(type: .search, at: 1)
+        ]
     }
 
     private func factorController(type: Controllers, at index: Int) -> UINavigationController {
+
         var navigation: UINavigationController
-        var controller: DiscoveryViewController
-
-        let client = TVmazeAPIClient()
-        let remoteRepository =  ShowsRemoteDataSource(client: client)
-        let repository = ShowsRepository(remoteDataSource: remoteRepository)
-        let viewModel = DiscoveryViewModel(service: repository)
-
-        controller = DiscoveryViewController(viewModel: viewModel)
-        controller.scrollDelegate = self
-        controller.title = type.rawValue
-        navigation = UINavigationController(rootViewController: controller)
-        navigation.navigationBar.prefersLargeTitles = true
-        configureNavApparence(nav: navigation)
-
         let item = UITabBarItem()
         item.tag = index
-        item.image = UIImage(systemName: "play.rectangle.fill")
 
+        switch type {
+        case .discovery:
+            let remoteRepository =  ShowsRemoteDataSource(client: client)
+            let repository = ShowsRepository(remoteDataSource: remoteRepository)
+            let viewModel = DiscoveryViewModel(service: repository)
+
+            let controller = DiscoveryViewController(viewModel: viewModel)
+            controller.scrollDelegate = self
+            controller.title = type.rawValue
+            navigation = UINavigationController(rootViewController: controller)
+            navigation.navigationBar.prefersLargeTitles = true
+            item.image = UIImage(systemName: "play.rectangle.fill")
+
+        case .search:
+            let controller = SearchViewController()
+            controller.title = type.rawValue
+            navigation = UINavigationController(rootViewController: controller)
+            navigation.navigationBar.prefersLargeTitles = true
+            item.image = UIImage(systemName: "magnifyingglass")
+        }
+
+        configureNavApparence(nav: navigation)
         navigation.tabBarItem = item
-
         return navigation
     }
 
     private enum Controllers: String {
         case discovery = "Discovery"
+        case search = "Search"
     }
 
     private func configureNavApparence(nav: UINavigationController) {
