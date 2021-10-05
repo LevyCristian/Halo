@@ -43,12 +43,16 @@ extension APIClient {
             }
             if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {
                 if let data = data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let genericModel = try decoder.decode(decodingType, from: data)
-                        completion?(genericModel, nil)
-                    } catch {
-                        completion?(nil, .requestFailed)
+                    if decodingType == Data.self {
+                        completion?(data, nil)
+                    } else {
+                        do {
+                            let decoder = JSONDecoder()
+                            let genericModel = try decoder.decode(decodingType, from: data)
+                            completion?(genericModel, nil)
+                        } catch {
+                            completion?(nil, .requestFailed)
+                        }
                     }
                 } else {
                     completion?(nil, .invalidData)
@@ -67,6 +71,7 @@ extension APIClient {
             DispatchQueue.main.async {
                 guard let json = json else {
                     if let error = error {
+                        print(request)
                         completion?(.failure(error))
                     } else {
                         completion?(.failure(.requestFailed))

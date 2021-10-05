@@ -27,4 +27,18 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
             return user
         }, completion: completion)
     }
+
+    func downloadImage(from url: String, completion: @escaping ((Result<Data, APIError>) -> Void)) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.badRequest))
+            return
+        }
+        let request = URLRequest(url: url)
+        perform(with: request, decode: { json -> Data? in
+            guard let image = json as? Data else {
+                return nil
+            }
+            return image
+        }, completion: completion)
+    }
 }

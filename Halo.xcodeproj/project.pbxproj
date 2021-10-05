@@ -14,6 +14,29 @@
 		D706054527091FFA008F3897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D706054427091FFA008F3897 /* Assets.xcassets */; };
 		D706054827091FFA008F3897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D706054627091FFA008F3897 /* LaunchScreen.storyboard */; };
 		D706055E27091FFA008F3897 /* HaloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706055D27091FFA008F3897 /* HaloUITests.swift */; };
+		D73A0BB1270BC370000E972C /* DiscoveryScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */; };
+		D76F3820270A5150002746E9 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F381F270A5150002746E9 /* ViewCode.swift */; };
+		D76F3822270A5167002746E9 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3821270A5167002746E9 /* Identifiable.swift */; };
+		D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3823270A5177002746E9 /* UIView+Autolayout.swift */; };
+		D76F3835270A69C7002746E9 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3834270A69C6002746E9 /* RootTabBarController.swift */; };
+		D76F383E270A7692002746E9 /* BaseCardTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F383D270A7692002746E9 /* BaseCardTabBar.swift */; };
+		D76F3841270A76E4002746E9 /* FloatyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3840270A76E4002746E9 /* FloatyTabBar.swift */; };
+		D76F3845270A7B1F002746E9 /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3844270A7B1F002746E9 /* CGPoint+Distance.swift */; };
+		D76F3847270A7C4E002746E9 /* FloatyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */; };
+		D77010D6270B164000353695 /* ShowsRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010D5270B164000353695 /* ShowsRemoteDataSourceProtocol.swift */; };
+		D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */; };
+		D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */; };
+		D77010DD270B1E7F00353695 /* ShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010DC270B1E7F00353695 /* ShowsRepository.swift */; };
+		D77010E1270B214900353695 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E0270B214900353695 /* DiscoveryViewModel.swift */; };
+		D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */; };
+		D77010E5270B232100353695 /* DiscoveryViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E4270B232100353695 /* DiscoveryViewModelDelegate.swift */; };
+		D77010E9270B26B000353695 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E8270B26B000353695 /* DiscoveryView.swift */; };
+		D77010EC270B286E00353695 /* CardsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010EB270B286E00353695 /* CardsFlowLayout.swift */; };
+		D77010EE270B2C2100353695 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010ED270B2C2100353695 /* DiscoveryViewController.swift */; };
+		D77010F0270B2F1700353695 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010EF270B2F1700353695 /* DiscoveryCollectionViewCell.swift */; };
+		D77010F3270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */; };
+		D77010F5270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */; };
+		D77010F8270B7F7400353695 /* DiscoveryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010F7270B7F7400353695 /* DiscoveryCellViewModel.swift */; };
 		D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */; };
 		D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */; };
 		D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */; };
@@ -69,6 +92,29 @@
 		D706055927091FFA008F3897 /* HaloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D706055D27091FFA008F3897 /* HaloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloUITests.swift; sourceTree = "<group>"; };
 		D706055F27091FFA008F3897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryScrollDelegate.swift; sourceTree = "<group>"; };
+		D76F381F270A5150002746E9 /* ViewCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		D76F3821270A5167002746E9 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		D76F3823270A5177002746E9 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		D76F3834270A69C6002746E9 /* RootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		D76F383D270A7692002746E9 /* BaseCardTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardTabBar.swift; sourceTree = "<group>"; };
+		D76F3840270A76E4002746E9 /* FloatyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyTabBar.swift; sourceTree = "<group>"; };
+		D76F3844270A7B1F002746E9 /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
+		D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyTabBarController.swift; sourceTree = "<group>"; };
+		D77010D5270B164000353695 /* ShowsRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRemoteDataSource.swift; sourceTree = "<group>"; };
+		D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsUseCaseProtocol.swift; sourceTree = "<group>"; };
+		D77010DC270B1E7F00353695 /* ShowsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRepository.swift; sourceTree = "<group>"; };
+		D77010E0270B214900353695 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryModelDataSource.swift; sourceTree = "<group>"; };
+		D77010E4270B232100353695 /* DiscoveryViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModelDelegate.swift; sourceTree = "<group>"; };
+		D77010E8270B26B000353695 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
+		D77010EB270B286E00353695 /* CardsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsFlowLayout.swift; sourceTree = "<group>"; };
+		D77010ED270B2C2100353695 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		D77010EF270B2F1700353695 /* DiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCellViewModelDataSource.swift; sourceTree = "<group>"; };
+		D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCellViewModelDelegate.swift; sourceTree = "<group>"; };
+		D77010F7270B7F7400353695 /* DiscoveryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCellViewModel.swift; sourceTree = "<group>"; };
 		D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -143,8 +189,11 @@
 			isa = PBXGroup;
 			children = (
 				D7E012A62709D946001FDED0 /* Application */,
-				D7A048F12709374B00A87FB5 /* Network Infrastructure */,
 				D7A048E42709351800A87FB5 /* Helpers */,
+				D77010D2270B14B600353695 /* Repository */,
+				D7A048F12709374B00A87FB5 /* NetworkInfrastructure */,
+				D77010DE270B202F00353695 /* ViewModels */,
+				D76F3825270A52A9002746E9 /* View */,
 				D706053C27091FF6008F3897 /* ViewController.swift */,
 				D706054427091FFA008F3897 /* Assets.xcassets */,
 				D706054627091FFA008F3897 /* LaunchScreen.storyboard */,
@@ -173,6 +222,142 @@
 			path = HaloUITests;
 			sourceTree = "<group>";
 		};
+		D73A0BAE270BC351000E972C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		D76F3825270A52A9002746E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D76F383C270A7684002746E9 /* Component */,
+				D77010D1270B147E00353695 /* Discovery */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D76F3826270A52BD002746E9 /* RootTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D76F3834270A69C6002746E9 /* RootTabBarController.swift */,
+			);
+			path = RootTabBar;
+			sourceTree = "<group>";
+		};
+		D76F383C270A7684002746E9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D77010EA270B280B00353695 /* CardsFlowLayout */,
+				D76F3826270A52BD002746E9 /* RootTabBar */,
+				D76F383F270A76BC002746E9 /* TabBar */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		D76F383F270A76BC002746E9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D76F383D270A7692002746E9 /* BaseCardTabBar.swift */,
+				D76F3840270A76E4002746E9 /* FloatyTabBar.swift */,
+				D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D77010D1270B147E00353695 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				D73A0BAE270BC351000E972C /* Delegate */,
+				D77010E6270B25D600353695 /* View */,
+				D77010ED270B2C2100353695 /* DiscoveryViewController.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		D77010D2270B14B600353695 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D3270B15F900353695 /* Shows */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D77010D3270B15F900353695 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D4270B160700353695 /* DataSource */,
+				D77010DA270B1DA900353695 /* ShowsUseCaseProtocol.swift */,
+				D77010DC270B1E7F00353695 /* ShowsRepository.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		D77010D4270B160700353695 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D9270B1D3600353695 /* Remote */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D77010D9270B1D3600353695 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D77010D7270B16BD00353695 /* ShowsRemoteDataSource.swift */,
+				D77010D5270B164000353695 /* ShowsRemoteDataSourceProtocol.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		D77010DE270B202F00353695 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D77010DF270B206200353695 /* Discovery */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D77010DF270B206200353695 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				D77010F1270B7E7400353695 /* Cell */,
+				D77010E0270B214900353695 /* DiscoveryViewModel.swift */,
+				D77010E4270B232100353695 /* DiscoveryViewModelDelegate.swift */,
+				D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		D77010E6270B25D600353695 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D77010E8270B26B000353695 /* DiscoveryView.swift */,
+				D77010EF270B2F1700353695 /* DiscoveryCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D77010EA270B280B00353695 /* CardsFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D77010EB270B286E00353695 /* CardsFlowLayout.swift */,
+			);
+			path = CardsFlowLayout;
+			sourceTree = "<group>";
+		};
+		D77010F1270B7E7400353695 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */,
+				D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */,
+				D77010F7270B7F7400353695 /* DiscoveryCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D7A048E42709351800A87FB5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +373,8 @@
 				D7A048E72709353D00A87FB5 /* CharacterSet+Extensions.swift */,
 				D7A048E92709358E00A87FB5 /* URLRequest+Extensions.swift */,
 				D7A048ED270935C300A87FB5 /* Dictionary+Extensions.swift */,
+				D76F3823270A5177002746E9 /* UIView+Autolayout.swift */,
+				D76F3844270A7B1F002746E9 /* CGPoint+Distance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,11 +383,13 @@
 			isa = PBXGroup;
 			children = (
 				D7A048EF270936CF00A87FB5 /* Descriptable.swift */,
+				D76F381F270A5150002746E9 /* ViewCode.swift */,
+				D76F3821270A5167002746E9 /* Identifiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D7A048F12709374B00A87FB5 /* Network Infrastructure */ = {
+		D7A048F12709374B00A87FB5 /* NetworkInfrastructure */ = {
 			isa = PBXGroup;
 			children = (
 				D7E0129D27094550001FDED0 /* Service */,
@@ -209,7 +398,7 @@
 				D7A048F52709393A00A87FB5 /* APIClient.swift */,
 				D7E0129827093E74001FDED0 /* Endpoint.swift */,
 			);
-			path = "Network Infrastructure";
+			path = NetworkInfrastructure;
 			sourceTree = "<group>";
 		};
 		D7A1CDA02709EBA2000F209A /* Helpers */ = {
@@ -302,6 +491,8 @@
 			dependencies = (
 			);
 			name = Halo;
+			packageProductDependencies = (
+			);
 			productName = Halo;
 			productReference = D706053527091FF6008F3897 /* Halo.app */;
 			productType = "com.apple.product-type.application";
@@ -463,21 +654,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76F383E270A7692002746E9 /* BaseCardTabBar.swift in Sources */,
+				D76F3835270A69C7002746E9 /* RootTabBarController.swift in Sources */,
+				D76F3841270A76E4002746E9 /* FloatyTabBar.swift in Sources */,
 				D706053D27091FF6008F3897 /* ViewController.swift in Sources */,
+				D77010EE270B2C2100353695 /* DiscoveryViewController.swift in Sources */,
 				D7E012A227094894001FDED0 /* TVmazeClientProtocol.swift in Sources */,
+				D76F3845270A7B1F002746E9 /* CGPoint+Distance.swift in Sources */,
+				D77010F8270B7F7400353695 /* DiscoveryCellViewModel.swift in Sources */,
 				D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */,
 				D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */,
+				D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */,
 				D7A048F62709393A00A87FB5 /* APIClient.swift in Sources */,
+				D73A0BB1270BC370000E972C /* DiscoveryScrollDelegate.swift in Sources */,
+				D77010F0270B2F1700353695 /* DiscoveryCollectionViewCell.swift in Sources */,
+				D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */,
+				D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */,
+				D77010F5270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift in Sources */,
+				D77010F3270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift in Sources */,
 				D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */,
 				D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */,
+				D77010E5270B232100353695 /* DiscoveryViewModelDelegate.swift in Sources */,
+				D77010D6270B164000353695 /* ShowsRemoteDataSourceProtocol.swift in Sources */,
 				D7E0129C270942B6001FDED0 /* Show.swift in Sources */,
+				D76F3847270A7C4E002746E9 /* FloatyTabBarController.swift in Sources */,
 				D7E012A02709459C001FDED0 /* TVmazeAPIProvider.swift in Sources */,
 				D706053927091FF6008F3897 /* AppDelegate.swift in Sources */,
+				D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */,
 				D7E012A4270948EF001FDED0 /* TVmazeAPIClient.swift in Sources */,
+				D76F3820270A5150002746E9 /* ViewCode.swift in Sources */,
+				D77010EC270B286E00353695 /* CardsFlowLayout.swift in Sources */,
 				D706053B27091FF6008F3897 /* SceneDelegate.swift in Sources */,
 				D7A048F0270936CF00A87FB5 /* Descriptable.swift in Sources */,
+				D77010E1270B214900353695 /* DiscoveryViewModel.swift in Sources */,
+				D77010DD270B1E7F00353695 /* ShowsRepository.swift in Sources */,
 				D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */,
 				D7A048F32709376B00A87FB5 /* APIError.swift in Sources */,
+				D76F3822270A5167002746E9 /* Identifiable.swift in Sources */,
+				D77010E9270B26B000353695 /* DiscoveryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
