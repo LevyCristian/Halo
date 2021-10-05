@@ -42,13 +42,13 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
         }, completion: completion)
     }
 
-    func searchShows(with query: String, completion: @escaping ((Result<[Show], APIError>) -> Void)) {
+    func searchShows(with query: String, completion: @escaping ((Result<[SearchElement], APIError>) -> Void)) {
         guard let request = TVmazeAPIProvider.search(query).request else {
             completion(.failure(.badRequest))
             return
         }
-        perform(with: request, decode: { json -> [Show]? in
-            guard let user = json as? [Show] else {
+        perform(with: request, decode: { json -> [SearchElement]? in
+            guard let user = json as? [SearchElement] else {
                 return nil
             }
             return user

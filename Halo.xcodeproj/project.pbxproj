@@ -16,6 +16,9 @@
 		D706055E27091FFA008F3897 /* HaloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706055D27091FFA008F3897 /* HaloUITests.swift */; };
 		D73A0BB1270BC370000E972C /* DiscoveryScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */; };
 		D73A0BBA270C6908000E972C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BB9270C6908000E972C /* SearchViewController.swift */; };
+		D73A0BC1270C7BF8000E972C /* SearchViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BC0270C7BF8000E972C /* SearchViewModelDataSource.swift */; };
+		D73A0BC3270C7CFA000E972C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BC2270C7CFA000E972C /* SearchViewModel.swift */; };
+		D73A0BC5270C81CF000E972C /* SearchElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BC4270C81CF000E972C /* SearchElement.swift */; };
 		D76F3820270A5150002746E9 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F381F270A5150002746E9 /* ViewCode.swift */; };
 		D76F3822270A5167002746E9 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3821270A5167002746E9 /* Identifiable.swift */; };
 		D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3823270A5177002746E9 /* UIView+Autolayout.swift */; };
@@ -95,6 +98,9 @@
 		D706055F27091FFA008F3897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryScrollDelegate.swift; sourceTree = "<group>"; };
 		D73A0BB9270C6908000E972C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D73A0BC0270C7BF8000E972C /* SearchViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelDataSource.swift; sourceTree = "<group>"; };
+		D73A0BC2270C7CFA000E972C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D73A0BC4270C81CF000E972C /* SearchElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchElement.swift; sourceTree = "<group>"; };
 		D76F381F270A5150002746E9 /* ViewCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		D76F3821270A5167002746E9 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		D76F3823270A5177002746E9 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
@@ -243,6 +249,8 @@
 		D73A0BBF270C7416000E972C /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				D73A0BC2270C7CFA000E972C /* SearchViewModel.swift */,
+				D73A0BC0270C7BF8000E972C /* SearchViewModelDataSource.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -250,8 +258,8 @@
 		D76F3825270A52A9002746E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D73A0BB8270C68E0000E972C /* Search */,
 				D76F383C270A7684002746E9 /* Component */,
+				D73A0BB8270C68E0000E972C /* Search */,
 				D77010D1270B147E00353695 /* Discovery */,
 			);
 			path = View;
@@ -455,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				D7E0129B270942B6001FDED0 /* Show.swift */,
+				D73A0BC4270C81CF000E972C /* SearchElement.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -680,9 +689,11 @@
 				D77010EE270B2C2100353695 /* DiscoveryViewController.swift in Sources */,
 				D7E012A227094894001FDED0 /* TVmazeClientProtocol.swift in Sources */,
 				D76F3845270A7B1F002746E9 /* CGPoint+Distance.swift in Sources */,
+				D73A0BC1270C7BF8000E972C /* SearchViewModelDataSource.swift in Sources */,
 				D77010F8270B7F7400353695 /* DiscoveryCellViewModel.swift in Sources */,
 				D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */,
 				D7A048E82709353D00A87FB5 /* CharacterSet+Extensions.swift in Sources */,
+				D73A0BC3270C7CFA000E972C /* SearchViewModel.swift in Sources */,
 				D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */,
 				D7A048F62709393A00A87FB5 /* APIClient.swift in Sources */,
 				D73A0BB1270BC370000E972C /* DiscoveryScrollDelegate.swift in Sources */,
@@ -711,6 +722,7 @@
 				D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */,
 				D7A048F32709376B00A87FB5 /* APIError.swift in Sources */,
 				D76F3822270A5167002746E9 /* Identifiable.swift in Sources */,
+				D73A0BC5270C81CF000E972C /* SearchElement.swift in Sources */,
 				D77010E9270B26B000353695 /* DiscoveryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

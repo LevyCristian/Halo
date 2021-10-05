@@ -53,7 +53,12 @@ class RootTabBarController: FloatyTabBarController {
             item.image = UIImage(systemName: "play.rectangle.fill")
 
         case .search:
-            let controller = SearchViewController()
+            let remoteRepository =  ShowsRemoteDataSource(client: client)
+            let repository = ShowsRepository(remoteDataSource: remoteRepository)
+            let viewModel = SearchViewModel(service: repository)
+
+            let controller = SearchViewController(viewModel: viewModel)
+            controller.scrollDelegate = self
             controller.title = type.rawValue
             navigation = UINavigationController(rootViewController: controller)
             navigation.navigationBar.prefersLargeTitles = true

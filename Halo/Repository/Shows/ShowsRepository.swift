@@ -26,8 +26,8 @@ class ShowsRepository: ShowsUseCaseProtocol {
             completion(result)
         }
     }
-    
-    func searchShows(with query: String, completion: @escaping ((Result<[Show], APIError>) -> Void)) {
+
+    func searchShows(with query: String, completion: @escaping ((Result<[SearchElement], APIError>) -> Void)) {
         self.remoteDataSource.searchShows(with: query) { result in
             completion(result)
         }
