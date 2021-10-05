@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol PostsViewModelDataSource {
+protocol DiscoveryViewModelDataSource {
     var shows: [Show] { get set }
     var currentPage: Int { get set }
 
     var discoveryCellViewModels: [DiscoveryCellViewModelDataSource] { get }
 
-    var delegate: ShowsViewModelDelegate? { get set }
+    var delegate: DiscoveryViewModelDelegate? { get set }
 
-    func loadShows(at page: Int)
+    func loadShows(at page: Int, completion: ((Result<Bool, APIError>) -> Void)?)
 }

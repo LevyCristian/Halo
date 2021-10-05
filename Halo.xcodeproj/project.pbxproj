@@ -29,7 +29,7 @@
 		D77010DD270B1E7F00353695 /* ShowsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010DC270B1E7F00353695 /* ShowsRepository.swift */; };
 		D77010E1270B214900353695 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E0270B214900353695 /* DiscoveryViewModel.swift */; };
 		D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */; };
-		D77010E5270B232100353695 /* ShowsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */; };
+		D77010E5270B232100353695 /* DiscoveryViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E4270B232100353695 /* DiscoveryViewModelDelegate.swift */; };
 		D77010E9270B26B000353695 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010E8270B26B000353695 /* DiscoveryView.swift */; };
 		D77010EC270B286E00353695 /* CardsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010EB270B286E00353695 /* CardsFlowLayout.swift */; };
 		D77010EE270B2C2100353695 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77010ED270B2C2100353695 /* DiscoveryViewController.swift */; };
@@ -107,7 +107,7 @@
 		D77010DC270B1E7F00353695 /* ShowsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRepository.swift; sourceTree = "<group>"; };
 		D77010E0270B214900353695 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
 		D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryModelDataSource.swift; sourceTree = "<group>"; };
-		D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewModelDelegate.swift; sourceTree = "<group>"; };
+		D77010E4270B232100353695 /* DiscoveryViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModelDelegate.swift; sourceTree = "<group>"; };
 		D77010E8270B26B000353695 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		D77010EB270B286E00353695 /* CardsFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsFlowLayout.swift; sourceTree = "<group>"; };
 		D77010ED270B2C2100353695 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 			children = (
 				D77010F1270B7E7400353695 /* Cell */,
 				D77010E0270B214900353695 /* DiscoveryViewModel.swift */,
-				D77010E4270B232100353695 /* ShowsViewModelDelegate.swift */,
+				D77010E4270B232100353695 /* DiscoveryViewModelDelegate.swift */,
 				D77010E2270B218E00353695 /* DiscoveryModelDataSource.swift */,
 			);
 			path = Discovery;
@@ -674,7 +674,7 @@
 				D77010F3270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift in Sources */,
 				D7A048EE270935C300A87FB5 /* Dictionary+Extensions.swift in Sources */,
 				D7A048EA2709358E00A87FB5 /* URLRequest+Extensions.swift in Sources */,
-				D77010E5270B232100353695 /* ShowsViewModelDelegate.swift in Sources */,
+				D77010E5270B232100353695 /* DiscoveryViewModelDelegate.swift in Sources */,
 				D77010D6270B164000353695 /* ShowsRemoteDataSourceProtocol.swift in Sources */,
 				D7E0129C270942B6001FDED0 /* Show.swift in Sources */,
 				D76F3847270A7C4E002746E9 /* FloatyTabBarController.swift in Sources */,

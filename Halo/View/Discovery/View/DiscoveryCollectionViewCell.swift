@@ -44,6 +44,11 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
         imageView
             .set(\.image, to: image)
     }
+
+    override func prepareForReuse() {
+        imageView.image = nil
+        titleLabel.text = nil
+    }
 }
 
 extension DiscoveryCollectionViewCell: ViewCode {

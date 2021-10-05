@@ -71,6 +71,7 @@ extension APIClient {
             DispatchQueue.main.async {
                 guard let json = json else {
                     if let error = error {
+                        print(request)
                         completion?(.failure(error))
                     } else {
                         completion?(.failure(.requestFailed))

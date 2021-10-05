@@ -17,22 +17,22 @@ struct Show: Codable {
     let genres: [String]
     let status: String
     let runtime: Int?
-    let averageRuntime: Int
-    let premiered: String
+    let averageRuntime: Int?
+    let premiered: String?
     let ended: String?
     let officialSite: String?
-    let schedule: Schedule
-    let rating: Rating
+    let schedule: Schedule?
+    let rating: Rating?
     let weight: Int
-    let externals: Externals
-    let image: Image
-    let summary: String
+    let externals: Externals?
+    let image: Image?
+    let summary: String?
     let updated: Int
 }
 
 // MARK: - Externals
 struct Externals: Codable {
-    let tvrage: Int
+    let tvrage: Int?
     let thetvdb: Int?
     let imdb: String?
 }

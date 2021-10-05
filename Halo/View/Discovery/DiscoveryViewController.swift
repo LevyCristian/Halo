@@ -20,12 +20,12 @@ class DiscoveryViewController: UIViewController {
         return view
     }()
 
-    private var viewModel: PostsViewModelDataSource
+    private var viewModel: DiscoveryViewModelDataSource
 
     private var lastContentOffset: CGFloat = 0
     weak var scrollDelegate: DiscoveryScrollDelegate?
 
-    init(viewModel: PostsViewModelDataSource) {
+    init(viewModel: DiscoveryViewModelDataSource) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.viewModel.delegate = self
@@ -57,14 +57,18 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: DiscoveryCollectionViewCell.reuseIdentifier,
             for: indexPath) as? DiscoveryCollectionViewCell else {
-            let cell = UICollectionViewCell()
-            return cell
-        }
+                let cell = UICollectionViewCell()
+                return cell
+            }
         var cellViewModel = self.viewModel.discoveryCellViewModels[indexPath.row]
         cellViewModel.indexPath = indexPath
         cellViewModel.delegate = self
         cell.configureCard(showTitle: cellViewModel.show.name)
-        cellViewModel.downloadImage(from: cellViewModel.show.image.medium)
+        if let imageURL = cellViewModel.show.image?.medium {
+            cellViewModel.downloadImage(from: imageURL)
+        } else {
+            cell.backgroundColor = .gray
+        }
         return cell
     }
 
@@ -76,11 +80,19 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
             self.scrollDelegate?.scrollViewDidScroll(.down)
         }
         lastContentOffset = scrollView.contentOffset.y
+
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height {
+            self.viewModel.currentPage += 1
+            self.viewModel.loadShows(at: self.viewModel.currentPage, completion: nil)
+        }
     }
 }
 
 extension DiscoveryViewController: CardsLayoutDelegate {
-    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+    func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
         guard let imageData = self.viewModel.discoveryCellViewModels[indexPath.row].downloadedData,
                 let image = UIImage(data: imageData) else {
             return 295 + CGFloat.random(in: -20...20)
@@ -88,9 +100,14 @@ extension DiscoveryViewController: CardsLayoutDelegate {
 
         return image.size.height
     }
+
+    func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
+        return 20
+    }
+
 }
 
-extension DiscoveryViewController: ShowsViewModelDelegate, DiscoveryCellViewModelDelegate {
+extension DiscoveryViewController: DiscoveryViewModelDelegate, DiscoveryCellViewModelDelegate {
     func didFinishedDownloadingImage(data: Data, forRowAt indexPath: IndexPath) {
         guard let cell = self.discoveryView.collectionView.cellForItem(at: indexPath) as? DiscoveryCollectionViewCell else {
             return
@@ -99,7 +116,7 @@ extension DiscoveryViewController: ShowsViewModelDelegate, DiscoveryCellViewMode
     }
 
     func didCompleLoadingShows(models: [DiscoveryCellViewModelDataSource]) {
-        self.discoveryView.collectionView.reloadData()
+         self.discoveryView.collectionView.reloadData()
 
     }
 
