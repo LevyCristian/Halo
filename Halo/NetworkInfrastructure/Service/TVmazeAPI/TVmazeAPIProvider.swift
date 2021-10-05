@@ -13,6 +13,10 @@ enum TVmazeAPIProvider {
     /// - Parameters:
     ///   - page: The current api page
     case shows(Int)
+    /// Search shows by a query
+    /// - Parameters:
+    ///   - query: The query to be peformed
+    case search(String)
 }
 
 extension TVmazeAPIProvider: Endpoint {
@@ -24,6 +28,8 @@ extension TVmazeAPIProvider: Endpoint {
         switch self {
         case .shows:
             return "/shows"
+        case .search:
+            return "/search/shows"
         }
     }
 
@@ -35,19 +41,21 @@ extension TVmazeAPIProvider: Endpoint {
         switch self {
         case .shows(let page):
             return ["page": page]
+        case .search(let query):
+            return ["q": query]
         }
     }
 
     var parameterEncoding: ParameterEnconding {
         switch self {
-        case .shows:
+        case .shows, .search:
             return .defaultEncoding
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .shows:
+        case .shows, .search:
             return .get
         }
     }
