@@ -12,7 +12,6 @@ protocol DiscoveryCellViewModelDataSource {
 
     var show: Show { get set }
     var indexPath: IndexPath? { get set }
-    var downloadedData: Data? { get set }
 
     var delegate: DiscoveryCellViewModelDelegate? { get set }
 

@@ -28,6 +28,8 @@ struct Show: Codable {
     let image: Image?
     let summary: String?
     let updated: Int
+
+    var downloadedImageData: Data?
 }
 
 // MARK: - Externals

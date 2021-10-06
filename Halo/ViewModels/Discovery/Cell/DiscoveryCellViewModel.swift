@@ -14,7 +14,6 @@ class DiscoveryCellViewModel: DiscoveryCellViewModelDataSource {
     var show: Show
 
     var indexPath: IndexPath?
-    var downloadedData: Data?
 
     weak var delegate: DiscoveryCellViewModelDelegate?
 
@@ -30,7 +29,7 @@ class DiscoveryCellViewModel: DiscoveryCellViewModelDataSource {
             }
             switch result {
             case .success(let data):
-                self?.downloadedData = data
+                self?.show.downloadedImageData = data
                 self?.delegate?.didFinishedDownloadingImage(data: data, forRowAt: indexpath)
             case .failure(let error):
                 self?.delegate?.apiDidReturnAnError(error: error)

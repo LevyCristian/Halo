@@ -64,7 +64,9 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
         cellViewModel.indexPath = indexPath
         cellViewModel.delegate = self
         cell.configureCard(showTitle: cellViewModel.show.name)
-        if let imageURL = cellViewModel.show.image?.medium {
+        if let imageData = cellViewModel.show.downloadedImageData {
+            cell.imageView.image = UIImage(data: imageData)
+        } else if let imageURL = cellViewModel.show.image?.medium {
             cellViewModel.downloadImage(from: imageURL)
         } else {
             cell.imageView.backgroundColor = .gray
@@ -89,11 +91,21 @@ extension DiscoveryViewController: UICollectionViewDelegate, UICollectionViewDat
             self.viewModel.loadShows(at: self.viewModel.currentPage)
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let show = self.viewModel.discoveryCellViewModels[indexPath.row].show
+        let viewModel = ShowViewModel(show,
+                                      service: self.viewModel.service)
+        let viewController = ShowViewController(viewModel: viewModel)
+        viewController.scrollDelegate = self.scrollDelegate
+        self.navigationController?.pushViewController(viewController,
+                                                      animated: true)
+    }
 }
 
 extension DiscoveryViewController: CardsLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
-        guard let imageData = self.viewModel.discoveryCellViewModels[indexPath.row].downloadedData,
+        guard let imageData = self.viewModel.discoveryCellViewModels[indexPath.row].show.downloadedImageData,
                 let image = UIImage(data: imageData) else {
             return 295 + CGFloat.random(in: -20...20)
         }
