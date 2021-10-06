@@ -37,15 +37,15 @@ class EpisodeTableViewCell: UITableViewCell {
     lazy var minutesLabel: UILabel = {
         let label = UILabel()
             .set(\.numberOfLines, to: 1)
-            .set(\.font, to: .systemFont(ofSize: 15, weight: .regular))
             .set(\.textColor, to: .lightGray)
         return label
     }()
 
     lazy var sumaryLabel: UILabel = {
         let label = UILabel()
+            .set(\.font, to: .systemFont(ofSize: 15, weight: .semibold))
             .set(\.numberOfLines, to: 3)
-            .set(\.textColor, to: .lightGray)
+            .set(\.textColor, to: .white)
         return label
     }()
 
@@ -87,7 +87,7 @@ extension EpisodeTableViewCell: ViewCode {
                      equal: \.topAnchor, constant: 24)
             .anchor(\.leadingAnchor,
                      referentTo: self,
-                     equal: \.leadingAnchor, constant: 8)
+                     equal: \.leadingAnchor, constant: 12)
             .anchor(\.widthAnchor, equalToConstant: 120)
             .anchor(\.heightAnchor, equalToConstant: 80)
 
