@@ -1,5 +1,5 @@
 //
-//  EpisodeModelDataSource.swift
+//  EpisodeViewModelDataSource.swift
 //  Halo
 //
 //  Created by Levy Cristian on 06/10/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol EpisodeModelDataSource {
+protocol EpisodeViewModelDataSource {
     var service: ShowsUseCaseProtocol { get set }
 
     var season: Int { get set }

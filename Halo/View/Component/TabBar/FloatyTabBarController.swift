@@ -19,6 +19,11 @@ class FloatyTabBarController: UITabBarController {
     fileprivate var anotherSmallViewBottomConstraint: NSLayoutConstraint?
     fileprivate var tabBarHeightConstraint: NSLayoutConstraint?
 
+    lazy var bottomPadding: CGFloat = {
+        let window = UIApplication.shared.windows.first
+        return (window?.safeAreaInsets.bottom ?? 0)
+    }()
+
     override var selectedIndex: Int {
         didSet {
             customTabBar.select(at: selectedIndex, animated: false, notifyDelegate: false)
@@ -72,7 +77,7 @@ class FloatyTabBarController: UITabBarController {
     }
 
     fileprivate func updateTabBarHeightIfNeeded() {
-        self.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: tabBarHeight, right: 0)
+        self.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: tabBarHeight - bottomPadding, right: 0)
 
         tabBarHeightConstraint = customTabBar.heightAnchor.constraint(equalToConstant: tabBarHeight)
         tabBarHeightConstraint?.isActive = true
@@ -91,10 +96,12 @@ class FloatyTabBarController: UITabBarController {
                 return
             }
             self.customTabBar.alpha = isHidden ? 0 : 1
-            self.additionalSafeAreaInsets = UIEdgeInsets(top: 0,
-                                                          left: 0,
-                                                          bottom: isHidden ? 0 : self.tabBarHeight,
-                                                          right: 0)
+            self.additionalSafeAreaInsets = UIEdgeInsets(
+                top: 0,
+                left: 0,
+                bottom: isHidden ? 0 : self.tabBarHeight - self.bottomPadding,
+                right: 0
+            )
         }
 
         if animated {

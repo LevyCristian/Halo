@@ -59,6 +59,7 @@ class ShowViewController: UIViewController {
     }
 
     private func loadShowInfo() {
+        navigationItem.title = self.viewModel.show.name
         showView.tableHeaderView.titleLabel.text = self.viewModel.show.name
         showView.tableHeaderView.subTitleLabel.text =  self.viewModel.show.genres.joined(separator: " / ")
         let text = self.viewModel.show.summary?.replaceHTMLOccurrences()
@@ -81,7 +82,6 @@ class ShowViewController: UIViewController {
                 .set(\.attributedText,
                       to: schedule.days.joined(separator: ",").imageAttributedString(sfSymbol: "calendar.badge.clock"))
             self.showView.tableHeaderView.scheduleStackView.addArrangedSubview(daysLabel)
-
         }
     }
 
@@ -160,6 +160,15 @@ extension ShowViewController: UITableViewDelegate, UITableViewDataSource {
         return 50
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cellViewModel = self.viewModel.episodesModelDataSource[indexPath.section+1]?[indexPath.row] else {
+            return
+        }
+        let controller = EpisodeViewController(viewMode: cellViewModel)
+        controller.scrollDelegate = scrollDelegate
+        navigationController?.pushViewController(controller, animated: true)
+    }
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if lastContentOffset > scrollView.contentOffset.y
             && lastContentOffset < scrollView.contentSize.height - scrollView.frame.height {
@@ -179,7 +188,7 @@ extension ShowViewController: ShowViewModelDelegate, EpisodeViewModelDelegate {
         cell.episodeImageView.image = UIImage(data: data)
     }
 
-    func didCompleLoadingEpisodes(models: [Int: [EpisodeModelDataSource]]) {
+    func didCompleLoadingEpisodes(models: [Int: [EpisodeViewModelDataSource]]) {
         DispatchQueue.main.async { [weak self] in
             self?.showView.tableView.reloadData()
         }
