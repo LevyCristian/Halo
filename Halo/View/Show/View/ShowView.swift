@@ -14,6 +14,9 @@ class ShowView: UIView {
             .set(\.backgroundColor, to: .clear)
             .set(\.estimatedRowHeight, to: 44)
             .set(\.rowHeight, to: UITableView.automaticDimension)
+            .set(\.separatorColor, to: .lightGray)
+        tableView.register(EpisodeTableViewCell.self,
+                           forCellReuseIdentifier: EpisodeTableViewCell.reuseIdentifier)
         return tableView
     }()
 
@@ -53,5 +56,4 @@ extension ShowView: ViewCode {
                      referentTo: self,
                      equal: \.bottomAnchor)
     }
-
 }

@@ -16,8 +16,10 @@ struct Episode: Codable {
     let type: String
     let airdate: String
     let airtime: String
-    let airstamp: Date
-    let runtime: Int
+    let airstamp: String?
+    let runtime: Int?
     let image: Image?
-    let summary: String
+    let summary: String?
+
+    var downloadedImageData: Data?
 }

@@ -1,24 +1,26 @@
 //
-//  DiscoveryCellViewModel.swift
+//  EpisodeViewModel.swift
 //  Halo
 //
-//  Created by Levy Cristian on 04/10/21.
+//  Created by Levy Cristian on 06/10/21.
 //
 
-import UIKit
+import Foundation
 
-class DiscoveryCellViewModel: DiscoveryCellViewModelDataSource {
+class EpisodeViewModel: EpisodeModelDataSource {
 
-    private let service: ShowsUseCaseProtocol
+    var service: ShowsUseCaseProtocol
 
-    var show: Show
+    var season: Int = 0
+    var episode: Episode
 
     var indexPath: IndexPath?
 
-    weak var delegate: DiscoveryCellViewModelDelegate?
+    weak var delegate: EpisodeViewModelDelegate?
 
-    init(show: Show, service: ShowsUseCaseProtocol) {
-        self.show = show
+    init(episode: Episode, service: ShowsUseCaseProtocol) {
+        self.episode = episode
+        self.season = episode.season
         self.service = service
     }
 

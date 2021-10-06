@@ -73,7 +73,7 @@ class ShowViewController: UIViewController {
         if !schedule.time.isEmpty {
             let timeLabel = UILabel.factorDefaultSubtitleLabel()
                 .set(\.attributedText,
-                  to: schedule.time.imageAttributedString(sfSymbol: "clock.fill"))
+                      to: schedule.time.imageAttributedString(sfSymbol: "clock.fill"))
             self.showView.tableHeaderView.scheduleStackView.addArrangedSubview(timeLabel)
         }
         if !schedule.days.isEmpty {
@@ -97,14 +97,67 @@ class ShowViewController: UIViewController {
 }
 
 extension ShowViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        self.viewModel.episodesModelDataSource.count
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        self.viewModel.episodesModelDataSource[section+1]?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "asjajids"
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: EpisodeTableViewCell.reuseIdentifier,
+            for: indexPath) as? EpisodeTableViewCell else {
+                let cell = UITableViewCell()
+                cell.textLabel?.text = "Unexpected Behavior"
+                return cell
+            }
+        guard var cellViewModel = self.viewModel.episodesModelDataSource[indexPath.section+1]?[indexPath.row] else {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "Unexpected Behavior"
+            return cell
+        }
+        cellViewModel.indexPath = indexPath
+        cellViewModel.delegate = self
+
+        let episode = cellViewModel.episode
+        cell.configure(
+            title: "\(episode.number). \(episode.name)",
+            minutes: episode.runtime,
+            sumary: episode.summary?.replaceHTMLOccurrences())
+
+        if let imageData = cellViewModel.episode.downloadedImageData {
+            cell.episodeImageView.image = UIImage(data: imageData)
+        } else if let imageURL = cellViewModel.episode.image?.medium {
+            cellViewModel.downloadImage(from: imageURL)
+        } else {
+            cell.episodeImageView.backgroundColor = .gray
+        }
+
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+            .set(\.backgroundColor, to: .black)
+
+        let label = UILabel()
+        label.frame = CGRect.init(x: 5, y: 5,
+                                  width: headerView.frame.width-10,
+                                  height: headerView.frame.height-10)
+        label.text = "Season \(section+1)"
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .white
+
+        headerView.addSubview(label)
+
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -118,9 +171,18 @@ extension ShowViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ShowViewController: ShowViewModelDelegate {
-    func didCompleLoadingShows(models: [DiscoveryCellViewModelDataSource]) {
+extension ShowViewController: ShowViewModelDelegate, EpisodeViewModelDelegate {
+    func didFinishedDownloadingImage(data: Data, forRowAt indexPath: IndexPath) {
+        guard let cell = self.showView.tableView.cellForRow(at: indexPath) as? EpisodeTableViewCell else {
+            return
+        }
+        cell.episodeImageView.image = UIImage(data: data)
+    }
 
+    func didCompleLoadingEpisodes(models: [Int: [EpisodeModelDataSource]]) {
+        DispatchQueue.main.async { [weak self] in
+            self?.showView.tableView.reloadData()
+        }
     }
 
     func apiDidReturnAnError(error: APIError) {

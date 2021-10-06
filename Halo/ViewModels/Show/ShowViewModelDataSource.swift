@@ -8,12 +8,16 @@
 import Foundation
 
 protocol ShowViewModelDataSource {
+    typealias Seasons = [Int: [EpisodeModelDataSource]]
+
+    var service: ShowsUseCaseProtocol { get set }
+
     var show: Show { get set }
 
-    var discoveryCellViewModels: [DiscoveryCellViewModelDataSource] { get }
+    var episodesModelDataSource: Seasons { get }
 
     var delegate: ShowViewModelDelegate? { get set }
 
-    func getShowEpisodes(for id: Int)
+    func getShowEpisodes(with id: Int)
     func downloadImage(from url: String)
 }

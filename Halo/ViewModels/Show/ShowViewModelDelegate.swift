@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ShowViewModelDelegate: AnyObject {
-    func didCompleLoadingShows(models: [DiscoveryCellViewModelDataSource])
+    func didCompleLoadingEpisodes(models: ShowViewModelDataSource.Seasons)
     func apiDidReturnAnError(error: APIError)
     func didFinishedDownloadingImage(data: Data)
 }

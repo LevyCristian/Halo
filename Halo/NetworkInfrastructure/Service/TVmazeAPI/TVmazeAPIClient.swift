@@ -39,7 +39,7 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
         }
         self.handlePerformData(request: request, completion: completion)
     }
-    
+
     func getEpisodes(with id: Int, completion: @escaping ((Result<[Episode], APIError>) -> Void)) {
         guard let request = TVmazeAPIProvider.episodes(id).request else {
             completion(.failure(.badRequest))
@@ -47,9 +47,10 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
         }
         self.handlePerformData(request: request, completion: completion)
     }
-    
-    private func handlePerformData<T: Decodable>(request: URLRequest,
-                                   completion: @escaping ((Result<T, APIError>) -> Void)) {
+
+    private func handlePerformData<T: Decodable>(
+        request: URLRequest,
+        completion: @escaping ((Result<T, APIError>) -> Void)) {
         perform(with: request, decode: { json -> T? in
             guard let object = json as? T else {
                 return nil

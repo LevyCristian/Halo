@@ -32,7 +32,7 @@ class ShowsRepository: ShowsUseCaseProtocol {
             completion(result)
         }
     }
-    
+
     func getEpisodes(with id: Int, completion: @escaping ((Result<[Episode], APIError>) -> Void)) {
         self.remoteDataSource.getEpisodes(with: id) { result in
             completion(result)
