@@ -29,10 +29,11 @@
 		D73A0BDA270D4373000E972C /* String+Replacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BD9270D4373000E972C /* String+Replacing.swift */; };
 		D73A0BDC270DBB5F000E972C /* UILabel+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BDB270DBB5E000E972C /* UILabel+Default.swift */; };
 		D73A0BDE270DC6BF000E972C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BDD270DC6BF000E972C /* Episode.swift */; };
-		D73A0BE4270DD69E000E972C /* EpisodeModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BE3270DD69E000E972C /* EpisodeModelDataSource.swift */; };
+		D73A0BE4270DD69E000E972C /* EpisodeViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BE3270DD69E000E972C /* EpisodeViewModelDataSource.swift */; };
 		D73A0BE7270DD702000E972C /* EpisodeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BE6270DD702000E972C /* EpisodeViewModelDelegate.swift */; };
 		D73A0BE9270DD73A000E972C /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BE8270DD73A000E972C /* EpisodeViewModel.swift */; };
 		D73A0BEC270DEB09000E972C /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BEB270DEB09000E972C /* EpisodeTableViewCell.swift */; };
+		D73A0BF0270E1745000E972C /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BEF270E1745000E972C /* EpisodeViewController.swift */; };
 		D76F3820270A5150002746E9 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F381F270A5150002746E9 /* ViewCode.swift */; };
 		D76F3822270A5167002746E9 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3821270A5167002746E9 /* Identifiable.swift */; };
 		D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3823270A5177002746E9 /* UIView+Autolayout.swift */; };
@@ -125,10 +126,11 @@
 		D73A0BD9270D4373000E972C /* String+Replacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Replacing.swift"; sourceTree = "<group>"; };
 		D73A0BDB270DBB5E000E972C /* UILabel+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Default.swift"; sourceTree = "<group>"; };
 		D73A0BDD270DC6BF000E972C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
-		D73A0BE3270DD69E000E972C /* EpisodeModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelDataSource.swift; sourceTree = "<group>"; };
+		D73A0BE3270DD69E000E972C /* EpisodeViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModelDataSource.swift; sourceTree = "<group>"; };
 		D73A0BE6270DD702000E972C /* EpisodeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModelDelegate.swift; sourceTree = "<group>"; };
 		D73A0BE8270DD73A000E972C /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
 		D73A0BEB270DEB09000E972C /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		D73A0BEF270E1745000E972C /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		D76F381F270A5150002746E9 /* ViewCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		D76F3821270A5167002746E9 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		D76F3823270A5177002746E9 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
@@ -318,15 +320,24 @@
 			children = (
 				D73A0BE8270DD73A000E972C /* EpisodeViewModel.swift */,
 				D73A0BE6270DD702000E972C /* EpisodeViewModelDelegate.swift */,
-				D73A0BE3270DD69E000E972C /* EpisodeModelDataSource.swift */,
+				D73A0BE3270DD69E000E972C /* EpisodeViewModelDataSource.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D73A0BED270E16FF000E972C /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				D73A0BEF270E1745000E972C /* EpisodeViewController.swift */,
+			);
+			path = Episode;
 			sourceTree = "<group>";
 		};
 		D76F3825270A52A9002746E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D76F383C270A7684002746E9 /* Component */,
+				D73A0BED270E16FF000E972C /* Episode */,
 				D73A0BC6270CA99D000E972C /* Show */,
 				D73A0BB8270C68E0000E972C /* Search */,
 				D77010D1270B147E00353695 /* Discovery */,
@@ -778,6 +789,7 @@
 				D73A0BB1270BC370000E972C /* DiscoveryScrollDelegate.swift in Sources */,
 				D77010F0270B2F1700353695 /* DiscoveryCollectionViewCell.swift in Sources */,
 				D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */,
+				D73A0BF0270E1745000E972C /* EpisodeViewController.swift in Sources */,
 				D73A0BD1270CCD58000E972C /* UITableView+DynamicLayout.swift in Sources */,
 				D77010DB270B1DA900353695 /* ShowsUseCaseProtocol.swift in Sources */,
 				D77010F5270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift in Sources */,
@@ -806,7 +818,7 @@
 				D73A0BE9270DD73A000E972C /* EpisodeViewModel.swift in Sources */,
 				D73A0BDA270D4373000E972C /* String+Replacing.swift in Sources */,
 				D7E0129927093E74001FDED0 /* Endpoint.swift in Sources */,
-				D73A0BE4270DD69E000E972C /* EpisodeModelDataSource.swift in Sources */,
+				D73A0BE4270DD69E000E972C /* EpisodeViewModelDataSource.swift in Sources */,
 				D7A048F32709376B00A87FB5 /* APIError.swift in Sources */,
 				D76F3822270A5167002746E9 /* Identifiable.swift in Sources */,
 				D73A0BC5270C81CF000E972C /* SearchElement.swift in Sources */,

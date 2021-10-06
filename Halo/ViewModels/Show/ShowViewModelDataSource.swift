@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ShowViewModelDataSource {
-    typealias Seasons = [Int: [EpisodeModelDataSource]]
+    typealias Seasons = [Int: [EpisodeViewModelDataSource]]
 
     var service: ShowsUseCaseProtocol { get set }
 

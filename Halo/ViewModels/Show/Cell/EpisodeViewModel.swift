@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EpisodeViewModel: EpisodeModelDataSource {
+class EpisodeViewModel: EpisodeViewModelDataSource {
 
     var service: ShowsUseCaseProtocol
 
