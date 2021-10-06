@@ -86,3 +86,5 @@ Quick is a behavior-driven development framework for Swift and Objective-C. In t
 ## **Author**
 
 Levy Anjos
+
+<img src="./images/appIcon.png" width=100>
