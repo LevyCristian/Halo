@@ -33,13 +33,12 @@ class SearchViewController: UIViewController {
     private var viewModel: SearchViewModelDataSource
     private var lastContentOffset: CGFloat = 0
 
-    weak var scrollDelegate: DiscoveryScrollDelegate?
+    weak var scrollDelegate: FloatyBarScrollDelegate?
 
     init(viewModel: SearchViewModelDataSource) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.viewModel.delegate = self
-
     }
 
     required init?(coder: NSCoder) {
@@ -82,7 +81,6 @@ extension SearchViewController: UISearchResultsUpdating, UISearchControllerDeleg
             selector: #selector(didHitScheduledTime),
             userInfo: searchBar.text,
             repeats: false)
-
     }
 
     @objc func didHitScheduledTime() {
@@ -110,9 +108,8 @@ extension SearchViewController: CardsLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
         guard let imageData = self.viewModel.discoveryCellViewModels[indexPath.row].show.downloadedImageData,
               let image = UIImage(data: imageData) else {
-                  return 295 + CGFloat.random(in: -20...20)
+                  return 295
               }
-
         return image.size.height
     }
 
