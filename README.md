@@ -3,12 +3,13 @@
 A implementation of a TV series app, using the API provided by the TVMaze
 [TVMaze Api](https://www.tvmaze.com/api) website, written in Swift 5 using Dependency Injection, MVVM, Repository, Some aspects of Clean Architecture, ViewCode patterns, SwiftLint and Travis.
 
-<p float="left">
-<img src="./images/1.PNG" width=200>
-<img src="./images/2.PNG" width=200>
-<img src="./images/3.PNG" width=200>
-<img src="./images/4.PNG" width=200>
-<img src="./images/5.PNG" width=200>
+<p float="center">
+<img src="./images/1.jpg" width=200>
+<img src="./images/2.jpg" width=200>
+<img src="./images/3.jpg" width=200>
+<img src="./images/4.jpg" width=200>
+<img src="./images/5.jpg" width=200>
+<img src="./images/6.jpg" width=200>
 </p>
 
 
