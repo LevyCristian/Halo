@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		D706053927091FF6008F3897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706053827091FF6008F3897 /* AppDelegate.swift */; };
 		D706053B27091FF6008F3897 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706053A27091FF6008F3897 /* SceneDelegate.swift */; };
-		D706053D27091FF6008F3897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706053C27091FF6008F3897 /* ViewController.swift */; };
 		D706054327091FF6008F3897 /* Halo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D706054127091FF6008F3897 /* Halo.xcdatamodeld */; };
 		D706054527091FFA008F3897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D706054427091FFA008F3897 /* Assets.xcassets */; };
 		D706054827091FFA008F3897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D706054627091FFA008F3897 /* LaunchScreen.storyboard */; };
 		D706055E27091FFA008F3897 /* HaloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D706055D27091FFA008F3897 /* HaloUITests.swift */; };
-		D73A0BB1270BC370000E972C /* DiscoveryScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */; };
+		D73A0BB1270BC370000E972C /* FloatyBarScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BB0270BC370000E972C /* FloatyBarScrollDelegate.swift */; };
 		D73A0BBA270C6908000E972C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BB9270C6908000E972C /* SearchViewController.swift */; };
 		D73A0BC1270C7BF8000E972C /* SearchViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BC0270C7BF8000E972C /* SearchViewModelDataSource.swift */; };
 		D73A0BC3270C7CFA000E972C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BC2270C7CFA000E972C /* SearchViewModel.swift */; };
@@ -101,7 +100,6 @@
 		D706053527091FF6008F3897 /* Halo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Halo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D706053827091FF6008F3897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D706053A27091FF6008F3897 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D706053C27091FF6008F3897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D706054227091FF6008F3897 /* Halo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Halo.xcdatamodel; sourceTree = "<group>"; };
 		D706054427091FFA008F3897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D706054727091FFA008F3897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 		D706055927091FFA008F3897 /* HaloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D706055D27091FFA008F3897 /* HaloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaloUITests.swift; sourceTree = "<group>"; };
 		D706055F27091FFA008F3897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryScrollDelegate.swift; sourceTree = "<group>"; };
+		D73A0BB0270BC370000E972C /* FloatyBarScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatyBarScrollDelegate.swift; sourceTree = "<group>"; };
 		D73A0BB9270C6908000E972C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D73A0BC0270C7BF8000E972C /* SearchViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelDataSource.swift; sourceTree = "<group>"; };
 		D73A0BC2270C7CFA000E972C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 				D7A048F12709374B00A87FB5 /* NetworkInfrastructure */,
 				D77010DE270B202F00353695 /* ViewModels */,
 				D76F3825270A52A9002746E9 /* View */,
-				D706053C27091FF6008F3897 /* ViewController.swift */,
 				D706054427091FFA008F3897 /* Assets.xcassets */,
 				D706054627091FFA008F3897 /* LaunchScreen.storyboard */,
 				D706054927091FFA008F3897 /* Info.plist */,
@@ -263,7 +260,7 @@
 		D73A0BAE270BC351000E972C /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				D73A0BB0270BC370000E972C /* DiscoveryScrollDelegate.swift */,
+				D73A0BB0270BC370000E972C /* FloatyBarScrollDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -366,6 +363,7 @@
 		D76F383F270A76BC002746E9 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				D73A0BAE270BC351000E972C /* Delegate */,
 				D76F383D270A7692002746E9 /* BaseCardTabBar.swift */,
 				D76F3840270A76E4002746E9 /* FloatyTabBar.swift */,
 				D76F3846270A7C4E002746E9 /* FloatyTabBarController.swift */,
@@ -376,7 +374,6 @@
 		D77010D1270B147E00353695 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
-				D73A0BAE270BC351000E972C /* Delegate */,
 				D77010E6270B25D600353695 /* View */,
 				D77010ED270B2C2100353695 /* DiscoveryViewController.swift */,
 			);
@@ -459,9 +456,9 @@
 		D77010F1270B7E7400353695 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */,
-				D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */,
 				D77010F7270B7F7400353695 /* DiscoveryCellViewModel.swift */,
+				D77010F4270B7F2F00353695 /* DiscoveryCellViewModelDelegate.swift */,
+				D77010F2270B7EC200353695 /* DiscoveryCellViewModelDataSource.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -772,7 +769,6 @@
 				D76F383E270A7692002746E9 /* BaseCardTabBar.swift in Sources */,
 				D76F3835270A69C7002746E9 /* RootTabBarController.swift in Sources */,
 				D76F3841270A76E4002746E9 /* FloatyTabBar.swift in Sources */,
-				D706053D27091FF6008F3897 /* ViewController.swift in Sources */,
 				D73A0BC9270CAA0A000E972C /* ShowHeaderView.swift in Sources */,
 				D73A0BCF270CB257000E972C /* ShowViewController.swift in Sources */,
 				D77010EE270B2C2100353695 /* DiscoveryViewController.swift in Sources */,
@@ -786,7 +782,7 @@
 				D73A0BD6270D3401000E972C /* ShowViewModelDelegate.swift in Sources */,
 				D77010D8270B16BD00353695 /* ShowsRemoteDataSource.swift in Sources */,
 				D7A048F62709393A00A87FB5 /* APIClient.swift in Sources */,
-				D73A0BB1270BC370000E972C /* DiscoveryScrollDelegate.swift in Sources */,
+				D73A0BB1270BC370000E972C /* FloatyBarScrollDelegate.swift in Sources */,
 				D77010F0270B2F1700353695 /* DiscoveryCollectionViewCell.swift in Sources */,
 				D77010E3270B218E00353695 /* DiscoveryModelDataSource.swift in Sources */,
 				D73A0BF0270E1745000E972C /* EpisodeViewController.swift in Sources */,

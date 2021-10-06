@@ -18,7 +18,7 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
 
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 2
+            .set(\.numberOfLines, to: 2)
         return label
     }()
 
@@ -46,9 +46,12 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
     }
 
     override func prepareForReuse() {
-        imageView.image = nil
-        titleLabel.text = nil
-        imageView.backgroundColor = .clear
+        imageView
+            .set(\.image, to: nil)
+        titleLabel
+            .set(\.text, to: nil)
+        imageView
+            .set(\.backgroundColor, to: .clear)
     }
 }
 
@@ -69,6 +72,5 @@ extension DiscoveryCollectionViewCell: ViewCode {
             .anchor(\.leadingAnchor, referentTo: self, equal: \.leadingAnchor, constant: 6)
             .anchor(\.trailingAnchor, referentTo: self, equal: \.trailingAnchor, constant: 6)
             .anchor(\.bottomAnchor, referentTo: self, equal: \.bottomAnchor)
-
     }
 }

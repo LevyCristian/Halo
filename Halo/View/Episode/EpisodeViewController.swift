@@ -15,7 +15,7 @@ class EpisodeViewController: UIViewController {
     }()
 
     private var lastContentOffset: CGFloat = 0
-    weak var scrollDelegate: DiscoveryScrollDelegate?
+    weak var scrollDelegate: FloatyBarScrollDelegate?
 
     private var viewModel: EpisodeViewModelDataSource
 

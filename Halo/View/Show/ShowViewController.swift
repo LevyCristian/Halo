@@ -17,7 +17,7 @@ class ShowViewController: UIViewController {
     }()
 
     private var lastContentOffset: CGFloat = 0
-    weak var scrollDelegate: DiscoveryScrollDelegate?
+    weak var scrollDelegate: FloatyBarScrollDelegate?
 
     var viewModel: ShowViewModelDataSource
 

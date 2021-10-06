@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DiscoveryScrollDelegate: AnyObject {
+protocol FloatyBarScrollDelegate: AnyObject {
     func scrollViewDidScroll(_ direction: Direction)
 }
 

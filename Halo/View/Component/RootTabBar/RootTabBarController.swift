@@ -100,7 +100,7 @@ class RootTabBarController: FloatyTabBarController {
     }
 }
 
-extension RootTabBarController: DiscoveryScrollDelegate {
+extension RootTabBarController: FloatyBarScrollDelegate {
     func scrollViewDidScroll(_ direction: Direction) {
         switch direction {
         case .up:
