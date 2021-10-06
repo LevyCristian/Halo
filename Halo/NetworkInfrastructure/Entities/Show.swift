@@ -30,6 +30,7 @@ struct Show: Codable {
     let updated: Int
 
     var downloadedImageData: Data?
+    var episodes: [Episode]?
 }
 
 // MARK: - Externals

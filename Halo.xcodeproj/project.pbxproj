@@ -28,6 +28,7 @@
 		D73A0BD8270D34A0000E972C /* ShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BD7270D34A0000E972C /* ShowViewModel.swift */; };
 		D73A0BDA270D4373000E972C /* String+Replacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BD9270D4373000E972C /* String+Replacing.swift */; };
 		D73A0BDC270DBB5F000E972C /* UILabel+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BDB270DBB5E000E972C /* UILabel+Default.swift */; };
+		D73A0BDE270DC6BF000E972C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A0BDD270DC6BF000E972C /* Episode.swift */; };
 		D76F3820270A5150002746E9 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F381F270A5150002746E9 /* ViewCode.swift */; };
 		D76F3822270A5167002746E9 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3821270A5167002746E9 /* Identifiable.swift */; };
 		D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76F3823270A5177002746E9 /* UIView+Autolayout.swift */; };
@@ -119,6 +120,7 @@
 		D73A0BD7270D34A0000E972C /* ShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModel.swift; sourceTree = "<group>"; };
 		D73A0BD9270D4373000E972C /* String+Replacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Replacing.swift"; sourceTree = "<group>"; };
 		D73A0BDB270DBB5E000E972C /* UILabel+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Default.swift"; sourceTree = "<group>"; };
+		D73A0BDD270DC6BF000E972C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		D76F381F270A5150002746E9 /* ViewCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		D76F3821270A5167002746E9 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		D76F3823270A5177002746E9 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
@@ -304,8 +306,8 @@
 		D76F3825270A52A9002746E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D73A0BC6270CA99D000E972C /* Show */,
 				D76F383C270A7684002746E9 /* Component */,
+				D73A0BC6270CA99D000E972C /* Show */,
 				D73A0BB8270C68E0000E972C /* Search */,
 				D77010D1270B147E00353695 /* Discovery */,
 			);
@@ -515,6 +517,7 @@
 			children = (
 				D7E0129B270942B6001FDED0 /* Show.swift */,
 				D73A0BC4270C81CF000E972C /* SearchElement.swift */,
+				D73A0BDD270DC6BF000E972C /* Episode.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				D7E0129C270942B6001FDED0 /* Show.swift in Sources */,
 				D73A0BD4270D33AF000E972C /* ShowViewModelDataSource.swift in Sources */,
 				D76F3847270A7C4E002746E9 /* FloatyTabBarController.swift in Sources */,
+				D73A0BDE270DC6BF000E972C /* Episode.swift in Sources */,
 				D7E012A02709459C001FDED0 /* TVmazeAPIProvider.swift in Sources */,
 				D706053927091FF6008F3897 /* AppDelegate.swift in Sources */,
 				D76F3824270A5177002746E9 /* UIView+Autolayout.swift in Sources */,
