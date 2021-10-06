@@ -32,4 +32,10 @@ class ShowsRemoteDataSource: ShowsRemoteDataSourceProtocol {
             completion(result)
         }
     }
+
+    func getEpisodes(with id: Int, completion: @escaping ((Result<[Episode], APIError>) -> Void)) {
+        self.client.getEpisodes(with: id) { result in
+            completion(result)
+        }
+    }
 }

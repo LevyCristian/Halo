@@ -9,7 +9,7 @@ import Foundation
 
 class SearchViewModel: SearchViewModelDataSource {
 
-    private let service: ShowsUseCaseProtocol
+    var service: ShowsUseCaseProtocol
 
     var shows: [Show] = []
     var discoveryCellViewModels: [DiscoveryCellViewModelDataSource] = []

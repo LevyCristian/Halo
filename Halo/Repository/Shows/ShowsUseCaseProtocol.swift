@@ -11,4 +11,5 @@ protocol ShowsUseCaseProtocol {
     func getshows(at page: Int, completion: @escaping ((Result<[Show], APIError>) -> Void))
     func downloadImage(from url: String, completion: @escaping ((Result<Data, APIError>) -> Void))
     func searchShows(with query: String, completion: @escaping ((Result<[SearchElement], APIError>) -> Void))
+    func getEpisodes(with id: Int, completion: @escaping ((Result<[Episode], APIError>) -> Void))
 }

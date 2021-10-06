@@ -8,6 +8,9 @@
 import Foundation
 
 protocol DiscoveryViewModelDataSource {
+
+    var service: ShowsUseCaseProtocol { get set }
+
     var shows: [Show] { get set }
     var currentPage: Int { get set }
 

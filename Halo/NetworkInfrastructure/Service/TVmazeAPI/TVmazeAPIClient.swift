@@ -20,12 +20,7 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
             completion(.failure(.badRequest))
             return
         }
-        perform(with: request, decode: { json -> [Show]? in
-            guard let user = json as? [Show] else {
-                return nil
-            }
-            return user
-        }, completion: completion)
+        self.handlePerformData(request: request, completion: completion)
     }
 
     func downloadImage(from url: String, completion: @escaping ((Result<Data, APIError>) -> Void)) {
@@ -34,12 +29,7 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
             return
         }
         let request = URLRequest(url: url)
-        perform(with: request, decode: { json -> Data? in
-            guard let image = json as? Data else {
-                return nil
-            }
-            return image
-        }, completion: completion)
+        self.handlePerformData(request: request, completion: completion)
     }
 
     func searchShows(with query: String, completion: @escaping ((Result<[SearchElement], APIError>) -> Void)) {
@@ -47,11 +37,25 @@ class TVmazeAPIClient: APIClient, TVmazeClientProtocol {
             completion(.failure(.badRequest))
             return
         }
-        perform(with: request, decode: { json -> [SearchElement]? in
-            guard let user = json as? [SearchElement] else {
+        self.handlePerformData(request: request, completion: completion)
+    }
+
+    func getEpisodes(with id: Int, completion: @escaping ((Result<[Episode], APIError>) -> Void)) {
+        guard let request = TVmazeAPIProvider.episodes(id).request else {
+            completion(.failure(.badRequest))
+            return
+        }
+        self.handlePerformData(request: request, completion: completion)
+    }
+
+    private func handlePerformData<T: Decodable>(
+        request: URLRequest,
+        completion: @escaping ((Result<T, APIError>) -> Void)) {
+        perform(with: request, decode: { json -> T? in
+            guard let object = json as? T else {
                 return nil
             }
-            return user
+            return object
         }, completion: completion)
     }
 }

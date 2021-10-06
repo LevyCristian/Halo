@@ -18,3 +18,4 @@ extension Identifiable {
 }
 
 extension UICollectionViewCell: Identifiable {}
+extension UITableViewCell: Identifiable {}
